@@ -45,9 +45,9 @@ Personal portfolio for **Miguel Beltran** — CS student at UC Davis and Full St
 | PROJECT | STACK |
 | :--- | :--- |
 | **8-Bit CPU** | Logisim, Digital Logic |
-| **Deadlock Tracker** | Next.js, TypeScript, Prisma, Tailwind |
+| **Deadlock Tracker** | Next.js, TypeScript, Prisma, PostgreSQL |
 | **Questify** | Next.js, TypeScript, Supabase, PostgreSQL |
-| **Kitch** | Java, Swing, MVC |
+| **Kitch** | Java, Spring Boot, React, Tailwind, H2, Vite |
 
 ---
 
@@ -59,15 +59,8 @@ Personal portfolio for **Miguel Beltran** — CS student at UC Davis and Full St
 │   ├── images/          # Avatar, project screenshots, favicon
 │   └── Resume/          # Resume PDF
 ├── index.html           # Main entry point
-├── LICENSE              # MIT License
 └── README.md            # You are here
 ```
-
----
-
-## /// LICENSE
-
-This project is licensed under the **MIT License** — see the [`LICENSE`](LICENSE) file for details.
 
 ---
 
@@ -80,4 +73,4 @@ This project is licensed under the **MIT License** — see the [`LICENSE`](LICEN
 
 ---
 
-**© 2026 miguel-beltran.exe // MIT Licensed // SYSTEM_END**
+**© 2026 miguel-beltran.exe // SYSTEM_END**
