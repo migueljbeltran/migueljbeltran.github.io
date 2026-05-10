@@ -7,11 +7,11 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Miguel Beltran | Computer Science student and Software Engineer at UC Davis. React, Next.js, Java, Spring Boot, Python, TypeScript."
+      content="Miguel Beltran | UC Davis Computer Science student and Software Engineer building full-stack platforms, backend systems, and ML pipelines."
     />
     <meta
       name="keywords"
-      content="Miguel Beltran, Software Engineer, Computer Science, UC Davis, React, Next.js, Python, TypeScript, JavaScript, Spring Boot, Prisma, Java, PostgreSQL, Supabase, Docker"
+      content="Miguel Beltran, Software Engineer, Computer Science, UC Davis, React, Next.js, Python, TypeScript, JavaScript, FastAPI, Spring Boot, Prisma, Java, PostgreSQL, SQLite, Redis, AWS, Docker, Pytest, Playwright, Vitest, Artificial Intelligence, Machine Learning, Data Science"
     />
     <meta name="author" content="Miguel Beltran" />
     <link rel="canonical" href="https://migueljbeltran.github.io/miguel-beltran.exe/" />
@@ -22,7 +22,7 @@
     <meta property="og:title" content="miguel-beltran.exe" />
     <meta
       property="og:description"
-      content="CS student at UC Davis. Software Engineer building with React, Next.js, Python, and TypeScript."
+      content="UC Davis CS student building full-stack platforms, backend systems, and ML pipelines with React, Next.js, Python, and TypeScript."
     />
     <meta property="og:image" content="Assets/images/thumbnail.png" />
 
@@ -32,7 +32,7 @@
     <meta property="twitter:title" content="miguel-beltran.exe" />
     <meta
       property="twitter:description"
-      content="CS student at UC Davis. Software Engineer building with React, Next.js, Python, and TypeScript."
+      content="UC Davis CS student building full-stack platforms, backend systems, and ML pipelines with React, Next.js, Python, and TypeScript."
     />
     <meta property="twitter:image" content="Assets/images/thumbnail.png" />
 
@@ -62,17 +62,27 @@
           "JavaScript",
           "Java",
           "C/C++",
+          "FastAPI",
           "Flask",
           "Node.js",
           "PostgreSQL",
           "Supabase",
-          "Docker"
+          "SQLite",
+          "Redis",
+          "AWS",
+          "Docker",
+          "Pytest",
+          "Playwright",
+          "Vitest",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Data Science"
         ],
         "sameAs": [
           "https://github.com/migueljbeltran",
           "https://www.linkedin.com/in/miguel-j-beltran"
         ],
-        "description": "Computer Science student at UC Davis with full stack experience building web applications and backend systems."
+        "description": "Computer Science student at UC Davis with full-stack experience building production-style web applications, backend systems, and machine learning pipelines."
       }
     </script>
 
@@ -211,6 +221,52 @@
         color: #ff2a2a;
       }
 
+      .system-grid {
+        background-image:
+          linear-gradient(rgba(18, 18, 18, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(18, 18, 18, 0.12) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+
+      .scanline {
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(51, 255, 87, 0.2),
+          transparent
+        );
+        animation: scanline 4s linear infinite;
+      }
+
+      .project-card img {
+        transform: scale(1);
+        transition: transform 0.45s ease;
+      }
+
+      .project-card:hover img {
+        transform: scale(1.06);
+      }
+
+      .project-card {
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translate(-2px, -2px);
+      }
+
+      @keyframes scanline {
+        0% {
+          transform: translateY(-120%);
+        }
+
+        100% {
+          transform: translateY(120%);
+        }
+      }
+
       @keyframes glitch-anim {
         0% {
           transform: translate(0);
@@ -257,12 +313,34 @@
       <div
         class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto"
       >
-        <a
-          href="#"
-          class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover"
-        >
-          miguel-beltran.exe
-        </a>
+        <div class="flex items-center gap-3">
+          <a
+            href="#"
+            class="bg-neo-white border-2 border-black px-4 py-1 text-xl sm:text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover"
+          >
+            miguel-beltran.exe
+          </a>
+          <div class="flex items-center gap-2">
+            <a
+              href="https://github.com/migueljbeltran"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Miguel Beltran on GitHub"
+              class="w-10 h-10 bg-neo-white border-2 border-black shadow-hard-sm flex items-center justify-center text-xl hover:bg-neo-yellow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover"
+            >
+              <i class="ri-github-fill"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/miguel-j-beltran"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Miguel Beltran on LinkedIn"
+              class="w-10 h-10 bg-neo-white border-2 border-black shadow-hard-sm flex items-center justify-center text-xl hover:bg-neo-blue hover:text-white hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover"
+            >
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
 
         <div
           class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard"
@@ -297,10 +375,10 @@
     </nav>
 
     <section
-      class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 relative overflow-hidden border-b-4 border-black"
+      class="min-h-screen flex flex-col justify-center px-4 pt-28 pb-16 relative overflow-hidden border-b-4 border-black system-grid"
     >
       <div
-        class="absolute top-1/3 left-[10%] w-16 h-16 bg-neo-blue border-4 border-black shadow-hard animate-bounce hidden lg:block rotate-12"
+        class="absolute top-1/4 left-[8%] w-16 h-16 bg-neo-blue border-4 border-black shadow-hard animate-bounce hidden lg:block rotate-12"
       ></div>
       <div
         class="absolute bottom-1/3 right-[10%] w-24 h-24 bg-neo-pink rounded-full border-4 border-black shadow-hard hidden lg:block animate-pulse"
@@ -311,57 +389,150 @@
         CODE
       </div>
 
-      <div class="relative z-10 text-center max-w-5xl">
-        <div
-          class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal"
-        >
-          <span class="font-mono font-bold text-neo-green bg-black px-2 mr-2"
-            >●</span
+      <div
+        class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-center"
+      >
+        <div class="text-left">
+          <div
+            class="inline-flex flex-wrap items-center gap-2 bg-neo-white border-2 border-black px-4 py-2 mb-6 shadow-hard rotate-[-2deg] reveal font-mono font-bold text-sm"
           >
-          <span class="font-mono font-bold">SYSTEM STATUS: ONLINE</span>
+            <span class="text-neo-green bg-black px-2">●</span>
+            <span>SYSTEM STATUS: ONLINE</span>
+            <span class="hidden sm:inline text-gray-400">/</span>
+            <span>UC DAVIS CS</span>
+            <span class="hidden sm:inline text-gray-400">/</span>
+            <span>FULL-STACK SYSTEMS</span>
+            <span class="hidden sm:inline text-gray-400">/</span>
+            <span>ARTIFICIAL INTELLIGENCE</span>
+            <span class="hidden sm:inline text-gray-400">/</span>
+            <span>MACHINE LEARNING</span>
+          </div>
+
+          <h1
+            class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.82] font-black uppercase tracking-normal mb-6 reveal mix-blend-darken"
+          >
+            SOFTWARE<br />
+            <span
+              class="text-white text-stroke-black"
+              style="-webkit-text-stroke: 3px black"
+              >ENGINEER</span
+            >
+          </h1>
+
+          <p
+            class="font-mono text-lg md:text-xl max-w-3xl mb-8 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1"
+          >
+            I build loud, useful software: event platforms, analytics systems,
+            backend tooling, and Artificial Intelligence / Machine Learning
+            experiments that turn messy data into usable signals.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 reveal">
+            <div class="bg-white border-2 border-black p-3 shadow-hard-sm">
+              <div class="font-mono text-xs font-bold text-gray-500">
+                CURRENT_ROLE
+              </div>
+              <div class="font-black text-lg">Assistant Technical Director</div>
+            </div>
+            <div class="bg-white border-2 border-black p-3 shadow-hard-sm">
+              <div class="font-mono text-xs font-bold text-gray-500">
+                EVENT_SCALE
+              </div>
+              <div class="font-black text-lg">70,000+ users</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 reveal">
+            <a
+              href="#projects"
+              class="bg-black text-white border-2 border-black px-8 py-4 text-lg font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover text-center"
+            >
+              VIEW FEATURED WORK
+            </a>
+            <a
+              href="Assets/Resume/Miguel_Beltran_Resume.pdf"
+              download="Miguel_Beltran_Resume.pdf"
+              class="bg-neo-white text-black border-2 border-black px-8 py-4 text-lg font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2"
+            >
+              <i class="ri-download-line"></i> DOWNLOAD RESUME
+            </a>
+          </div>
         </div>
 
-        <h1
-          class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 reveal mix-blend-darken"
+        <aside
+          class="reveal bg-neo-black text-white border-4 border-black shadow-hard-xl rotate-1 overflow-hidden"
         >
-          SOFTWARE<br />
-          <span
-            class="text-white text-stroke-black"
-            style="-webkit-text-stroke: 3px black"
-            >ENGINEER</span
-          >
-        </h1>
-
-        <p
-          class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1"
-        >
-          I build digital products that refuse to be boring.
-        </p>
-
-        <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
-          <a
-            href="#projects"
-            class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover"
-          >
-            VIEW DATABASE
-          </a>
-          <a
-            href="Assets/Resume/Miguel_Beltran_Resume.pdf"
-            download="Miguel_Beltran_Resume.pdf"
-            class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2"
-          >
-            <i class="ri-download-line"></i> DOWNLOAD RESUME
-          </a>
-        </div>
+          <div class="flex items-center justify-between border-b-2 border-white/20 p-4 font-mono text-xs">
+            <div class="flex gap-2">
+              <span class="w-3 h-3 bg-neo-red border border-black"></span>
+              <span class="w-3 h-3 bg-neo-yellow border border-black"></span>
+              <span class="w-3 h-3 bg-neo-green border border-black"></span>
+            </div>
+            <span class="text-neo-green">portfolio.boot</span>
+          </div>
+          <div class="relative p-6 min-h-[420px] overflow-hidden">
+            <div class="scanline absolute inset-x-0 top-0 h-1/3 opacity-70"></div>
+            <div class="relative z-10 space-y-5 font-mono">
+              <div>
+                <p class="text-neo-green text-xs mb-1">BUILD AREAS</p>
+                <h2 class="font-display text-4xl font-black leading-none">
+                  Software for real users, messy data, and fast-moving events.
+                </h2>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="border-2 border-white/20 p-3 bg-white/5">
+                  <div class="text-2xl font-black text-neo-yellow">
+                    Live events
+                  </div>
+                  <div class="text-[10px] uppercase text-gray-400 mt-1">
+                    schedules, maps, routes
+                  </div>
+                </div>
+                <div class="border-2 border-white/20 p-3 bg-white/5">
+                  <div class="text-2xl font-black text-neo-blue">
+                    Game data
+                  </div>
+                  <div class="text-[10px] uppercase text-gray-400 mt-1">
+                    stats, search, rankings
+                  </div>
+                </div>
+                <div class="border-2 border-white/20 p-3 bg-white/5">
+                  <div class="text-2xl font-black text-neo-pink">
+                    AI + ML
+                  </div>
+                  <div class="text-[10px] uppercase text-gray-400 mt-1">
+                    intelligence, models
+                  </div>
+                </div>
+                <div class="border-2 border-white/20 p-3 bg-white/5">
+                  <div class="text-2xl font-black text-neo-green">
+                    Ship flow
+                  </div>
+                  <div class="text-[10px] uppercase text-gray-400 mt-1">
+                    Docker, tests, deploys
+                  </div>
+                </div>
+              </div>
+              <div class="border-2 border-neo-green p-4 bg-black">
+                <p class="text-xs text-gray-500 mb-2">WHY IT MATTERS</p>
+                <p class="text-sm leading-relaxed">
+                  I like building tools where the interface is only half the
+                  work. The hard part is the search, sync, data model, and
+                  reliability behind it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
     <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
       <div class="marquee-container font-mono font-bold text-2xl text-white">
         <div class="marquee-content">
-          /// OPEN FOR INTERNSHIPS /// SOFTWARE ENGINEERING /// REACT ///
-          NEXT.JS /// PYTHON /// TYPESCRIPT /// UC DAVIS CS /// OPEN FOR
-          INTERNSHIPS /// SOFTWARE ENGINEERING ///
+          /// SOFTWARE ENGINEERING /// FULL-STACK SYSTEMS /// REACT ///
+          NEXT.JS /// PYTHON /// TYPESCRIPT /// UC DAVIS CS /// ML PIPELINES
+          /// BACKEND INFRASTRUCTURE ///
         </div>
       </div>
     </div>
@@ -391,17 +562,18 @@
           <p class="font-mono text-xl leading-relaxed mb-6">
             I am Miguel. A CS student at
             <span class="bg-neo-yellow px-1 border border-black">UC Davis</span>
-            with full stack experience building web apps and backend systems.
+            with full-stack experience building production-style web platforms,
+            backend systems, and machine learning pipelines.
           </p>
           <p
             class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4"
           >
-            > Full Stack Engineer with a passion for clean code.<br />
-            > Building digital experiences that stand out.<br />
-            > Always learning, always shipping.
+            > Assistant Technical Director for ASUCD Picnic Day.<br />
+            > Shipping React, TypeScript, SQLite, and Docker-backed tools.<br />
+            > Building analytics, search, data sync, and ML systems.
           </p>
 
-          <div class="flex gap-4">
+          <div class="flex flex-wrap gap-4">
             <div
               class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent"
             >
@@ -410,9 +582,342 @@
             <div
               class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black"
             >
-              🟢 STATUS: SEEKING INTERNSHIP
+              🎓 UC DAVIS CS: EXPECTED JUNE 2027
             </div>
           </div>
+
+          <div
+            class="mt-8 bg-neo-white border-4 border-black p-5 shadow-hard font-mono"
+          >
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+              <h3 class="text-2xl font-black uppercase font-display">
+                Education_Record
+              </h3>
+              <span class="bg-neo-black text-white px-2 py-1 text-xs font-bold"
+                >EXPECTED JUNE 2027</span
+              >
+            </div>
+            <p class="font-bold text-lg">University of California, Davis</p>
+            <p class="text-gray-700 mb-3">
+              Bachelor of Science in Computer Science
+            </p>
+            <p class="text-sm text-gray-600">
+              Coursework: Algorithms & Data Structures, Operating Systems,
+              Machine Learning, Artificial Intelligence, Computer Architecture
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="projects"
+      class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <h2
+            class="text-6xl md:text-9xl font-black uppercase tracking-normal text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-black"
+            style="-webkit-text-stroke: 3px black"
+          >
+            Selected Works
+          </h2>
+          <p class="font-mono text-lg bg-white border-4 border-black p-4 shadow-hard max-w-md">
+            Production-style builds first. Smaller experiments below. Every
+            card links straight to the thing or the source.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-10">
+          <article
+            class="project-card reveal group bg-white border-4 border-black p-5 shadow-hard lg:col-span-3"
+          >
+            <div
+              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/deadlock_tracker_sample.png"
+                alt="Deadlock Tracker preview"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-3 left-3 bg-neo-orange text-black border-2 border-black px-3 py-1 font-mono text-xs font-black"
+              >
+                PRODUCTION-STYLE
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between gap-5">
+              <div class="min-w-0">
+                <h3
+                  class="text-4xl md:text-5xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover"
+                >
+                  dltracker
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xl">
+                  Production-style Deadlock analytics platform with 10 pages,
+                  45+ reusable components, Steam and Deadlock API integrations,
+                  identity disambiguation across 5 regions, Redis-backed rate
+                  limiting, Zod validation, Sentry monitoring, and multi-tier
+                  ISR caching.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >Next.js 16</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >TypeScript</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >PostgreSQL</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1">Redis</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Zod</span>
+                </div>
+              </div>
+              <div class="flex sm:flex-col gap-2 shrink-0">
+                <a
+                  href="https://dltracker.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open dltracker live site"
+                  class="w-14 h-14 border-2 border-black bg-neo-blue flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+                >
+                  <i class="ri-global-line text-2xl"></i>
+                </a>
+                <a
+                  href="https://github.com/migueljbeltran/deadlock-tracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open dltracker source code"
+                  class="w-14 h-14 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+                >
+                  <i class="ri-github-fill text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal group bg-white border-4 border-black p-5 shadow-hard lg:col-span-3"
+          >
+            <div
+              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/picnicday_sample.png"
+                alt="Picnic Day Scheduler preview"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-3 left-3 bg-neo-blue text-white border-2 border-black px-3 py-1 font-mono text-xs font-black"
+              >
+                LIVE UC DAVIS
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between gap-5">
+              <div class="min-w-0">
+                <h3
+                  class="text-4xl md:text-5xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover"
+                >
+                  Picnic Day Scheduler
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xl">
+                  UC Davis Picnic Day event scheduler for 70,000+ attendees,
+                  with ranked search, interactive maps, route generation,
+                  SQLite-backed event data, authenticated CSV sync, and
+                  exportable PDF schedules.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">React</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >TypeScript</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1">SQLite</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Leaflet</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Mapbox</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Docker</span>
+                </div>
+              </div>
+              <div class="flex sm:flex-col gap-2 shrink-0">
+                <a
+                  href="https://picnicday.ucdavis.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Picnic Day Scheduler live site"
+                  class="w-14 h-14 border-2 border-black bg-neo-blue flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+                >
+                  <i class="ri-global-line text-2xl"></i>
+                </a>
+                <a
+                  href="https://github.com/ucdavis/ASUCD-PicnicDay-Scheduler"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Picnic Day Scheduler source code"
+                  class="w-14 h-14 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
+                >
+                  <i class="ri-github-fill text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-2"
+          >
+            <div
+              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/song_pop_pred_sample.png"
+                alt="Song Popularity Predictor preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between gap-4">
+              <div class="min-w-0">
+                <h3
+                  class="text-3xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover"
+                >
+                  Song Popularity Predictor
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  Supervised ML pipeline across 32,000+ Spotify tracks using
+                  Random Forest, XGBoost, and Logistic Regression. Reformulated
+                  low-signal regression work into hit classification and tuned
+                  artist popularity plus genre features to reach 80% Random
+                  Forest accuracy.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">Python</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >TensorFlow</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >XGBoost</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >scikit-learn</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1">Pandas</span>
+                  <span class="bg-neo-black text-white px-2 py-1">NumPy</span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/Rytham1/song-popularity-predictor"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Song Popularity Predictor source code"
+                class="w-14 h-14 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm shrink-0"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-2"
+          >
+            <div
+              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/kitch_sample.png"
+                alt="Kitch preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between gap-4">
+              <div class="min-w-0">
+                <h3
+                  class="text-3xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover"
+                >
+                  Kitch
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  Full-stack kitchen management app with a 15-endpoint Spring
+                  Boot REST API and layered MVC architecture. Optimized backend
+                  query performance by eliminating N+1 queries through JPQL
+                  fetch joins and transactional workflows.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">Java</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >Spring Boot</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1">React</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >Tailwind</span
+                  >
+                  <span class="bg-neo-black text-white px-2 py-1">H2</span>
+                  <span class="bg-neo-black text-white px-2 py-1">Vite</span>
+                </div>
+              </div>
+              <a
+                href="https://github.com/migueljbeltran/Kitch"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Kitch source code"
+                class="w-14 h-14 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm shrink-0"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-2"
+          >
+            <div
+              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
+            >
+              <img
+                src="Assets/images/8BitCPU_Sample.png"
+                alt="8-Bit CPU preview"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between gap-4">
+              <div class="min-w-0">
+                <h3
+                  class="text-3xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover"
+                >
+                  8-Bit CPU
+                </h3>
+                <p class="font-mono text-sm mb-4 max-w-xs">
+                  5-stage pipelined 8-bit CPU with data forwarding and hazard
+                  detection, correctly executing 20+ custom ISA instructions
+                  in Logisim.
+                </p>
+                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                  <span class="bg-neo-black text-white px-2 py-1">Logisim</span>
+                  <span class="bg-neo-black text-white px-2 py-1"
+                    >Digital Logic</span
+                  >
+                </div>
+              </div>
+              <a
+                href="https://github.com/migueljbeltran/8bit-cpu"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open 8-Bit CPU source code"
+                class="w-14 h-14 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm shrink-0"
+              >
+                <i class="ri-arrow-right-up-line text-2xl"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="text-center mt-24">
+          <a
+            href="https://github.com/migueljbeltran?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-black transition-all shadow-hard hover:shadow-none cursor-hover"
+          >
+            VIEW ALL REPOS ON GITHUB
+          </a>
         </div>
       </div>
     </section>
@@ -436,7 +941,7 @@
           class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4"
         >
           <h2
-            class="text-6xl md:text-8xl font-black uppercase text-white tracking-tighter"
+            class="text-6xl md:text-8xl font-black uppercase text-white tracking-normal"
           >
             TECH<span class="text-neo-green">_STACK</span>
           </h2>
@@ -448,7 +953,81 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap justify-center md:justify-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5 mb-10">
+          <div class="reveal bg-white text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black text-neo-blue mb-3">
+              01 / FRONTEND
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Interfaces</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">React</span>
+              <span class="bg-neo-black text-white px-2 py-1">Next.js</span>
+              <span class="bg-neo-black text-white px-2 py-1">TypeScript</span>
+              <span class="bg-neo-black text-white px-2 py-1">Tailwind</span>
+              <span class="bg-neo-black text-white px-2 py-1">SCSS</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-green text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              02 / BACKEND
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Systems</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">Node.js</span>
+              <span class="bg-neo-black text-white px-2 py-1">FastAPI</span>
+              <span class="bg-neo-black text-white px-2 py-1">Express</span>
+              <span class="bg-neo-black text-white px-2 py-1">Spring Boot</span>
+              <span class="bg-neo-black text-white px-2 py-1">Flask</span>
+              <span class="bg-neo-black text-white px-2 py-1">REST APIs</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-yellow text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              03 / DATA
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Storage</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">PostgreSQL</span>
+              <span class="bg-neo-black text-white px-2 py-1">SQLite</span>
+              <span class="bg-neo-black text-white px-2 py-1">Redis</span>
+              <span class="bg-neo-black text-white px-2 py-1">Firestore</span>
+              <span class="bg-neo-black text-white px-2 py-1">Supabase</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-pink text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              04 / ARTIFICIAL INTELLIGENCE
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">
+              Machine Learning
+            </h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">TensorFlow</span>
+              <span class="bg-neo-black text-white px-2 py-1">PyTorch</span>
+              <span class="bg-neo-black text-white px-2 py-1">XGBoost</span>
+              <span class="bg-neo-black text-white px-2 py-1">scikit-learn</span>
+              <span class="bg-neo-black text-white px-2 py-1">Pandas</span>
+              <span class="bg-neo-black text-white px-2 py-1">NumPy</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-purple text-white border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              05 / QUALITY
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Shipping</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">Docker</span>
+              <span class="bg-neo-black text-white px-2 py-1">AWS</span>
+              <span class="bg-neo-black text-white px-2 py-1">pytest</span>
+              <span class="bg-neo-black text-white px-2 py-1">Playwright</span>
+              <span class="bg-neo-black text-white px-2 py-1">Vitest</span>
+              <span class="bg-neo-black text-white px-2 py-1">Sentry</span>
+              <span class="bg-neo-black text-white px-2 py-1">GitHub Actions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex flex-wrap justify-center md:justify-start">
           <!-- Languages -->
           <div
             class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
@@ -617,6 +1196,21 @@
           </div>
 
           <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ FRAMEWORK
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              FASTAPI
+            </div>
+          </div>
+
+          <div
             class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
           >
             <div
@@ -770,6 +1364,21 @@
           </div>
 
           <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ CLOUD
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              AWS
+            </div>
+          </div>
+
+          <div
             class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
           >
             <div
@@ -826,6 +1435,36 @@
               class="text-white group-hover:text-black font-black font-display text-xl uppercase"
             >
               VITEST
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ TESTING
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
+            >
+              PYTEST
+            </div>
+          </div>
+
+          <div
+            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
+          >
+            <div
+              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
+            >
+              >_ TESTING
+            </div>
+            <div
+              class="text-white group-hover:text-black font-black font-display text-lg uppercase"
+            >
+              PLAYWRIGHT
             </div>
           </div>
 
@@ -1032,7 +1671,7 @@
         <div
           class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500"
         >
-          <span>TOTAL_NODES: 38</span>
+          <span>TOTAL_NODES: 42</span>
           <span>MEMORY_USAGE: 128MB</span>
         </div>
       </div>
@@ -1040,7 +1679,7 @@
 
     <section id="experience" class="py-24 px-4 max-w-7xl mx-auto">
       <h2
-        class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center"
+        class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-normal text-center"
       >
         Experience<span class="text-neo-red">_Log</span>
       </h2>
@@ -1069,20 +1708,24 @@
             </p>
             <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
               <li>
-                Led a 4-engineer Agile team to ship a React/TypeScript event
-                platform for 70,000+ attendees with a 4-tier ranked search
-                engine, interactive Leaflet map with auto-generated walking
-                routes via Mapbox Directions API, and exportable PDF schedules.
+                Led a 4-engineer Agile team building a React/TypeScript event
+                platform supporting 70,000+ attendees during UC Davis's annual
+                campus-wide event.
               </li>
               <li>
-                Eliminated 2 external runtime dependencies by migrating to
-                embedded SQLite, building a column-mapped CSV sync pipeline with
-                coordinate normalization, upsert logic, and stale record
-                purging.
+                Designed a ranked search engine combining exact, substring,
+                synonym expansion, and Levenshtein fuzzy matching across event
+                schedules and locations.
               </li>
               <li>
-                Dockerized the full-stack app, reducing onboarding setup to a
-                single command, and built a guided 8-step onboarding tutorial.
+                Migrated from Supabase and Google Sheets to embedded SQLite
+                with authenticated CSV sync pipelines, upserts, and stale
+                record cleanup.
+              </li>
+              <li>
+                Dockerized the full-stack application, reducing onboarding to
+                one docker compose up command and improving local environment
+                consistency.
               </li>
             </ul>
           </div>
@@ -1109,14 +1752,13 @@
             </p>
             <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
               <li>
-                Built 10+ reusable Next.js components and a shared multi-page
-                layout system for a 6-person Agile team, cutting new page
-                development time by approximately 80%.
+                Developed 10+ reusable Next.js components and a shared
+                multi-page layout system for a 6-person Agile team, reducing
+                implementation time by 80%.
               </li>
               <li>
-                Authored mobile-first SCSS mixins adopted project-wide,
-                resolving all reported cross-device rendering issues and
-                establishing the team's responsive design standard.
+                Built responsive SCSS utility mixins adopted across the
+                codebase, standardizing mobile-first design patterns.
               </li>
             </ul>
           </div>
@@ -1143,14 +1785,13 @@
             </p>
             <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
               <li>
-                Built a two-stage FAQ retrieval pipeline (Levenshtein fuzzy
-                matching + keyword fallback) that reduced unanswered onboarding
-                queries by 50% across a 100+ member organization.
+                Built a two-stage FAQ retrieval system using Levenshtein fuzzy
+                matching and keyword fallback logic, reducing unanswered
+                onboarding questions by 50%.
               </li>
               <li>
-                Automated 4+ weekly announcements via a Python/Flask Slack bot
-                with a React/Firestore admin dashboard, saving officers an
-                estimated 2+ hours/week of manual coordination.
+                Automated recurring announcements with a Python/Flask Slack bot
+                and React/Firestore dashboard, saving organizers 2+ hours/week.
               </li>
             </ul>
           </div>
@@ -1178,7 +1819,7 @@
           class="flex justify-between items-center mb-6 border-b-2 border-white pb-3"
         >
           <h2
-            class="text-4xl md:text-5xl font-black uppercase text-white tracking-tight"
+            class="text-4xl md:text-5xl font-black uppercase text-white tracking-normal"
           >
             CODING<span class="text-neo-green">_STATS</span>
           </h2>
@@ -1227,7 +1868,7 @@
                 <div class="text-right">
                   <div
                     id="total-contributions"
-                    class="text-2xl font-black text-neo-green tracking-tighter"
+                    class="text-2xl font-black text-neo-green tracking-normal"
                   >
                     --
                   </div>
@@ -1249,7 +1890,7 @@
                   </div>
                   <div
                     id="repos-count"
-                    class="text-white font-black text-3xl tracking-tighter"
+                    class="text-white font-black text-3xl tracking-normal"
                   >
                     --
                   </div>
@@ -1264,7 +1905,7 @@
                   </div>
                   <div
                     id="followers-count"
-                    class="text-white font-black text-3xl tracking-tighter"
+                    class="text-white font-black text-3xl tracking-normal"
                   >
                     --
                   </div>
@@ -1279,7 +1920,7 @@
                   </div>
                   <div
                     id="total-contributions-grid"
-                    class="text-white font-black text-3xl tracking-tighter"
+                    class="text-white font-black text-3xl tracking-normal"
                   >
                     --
                   </div>
@@ -1294,7 +1935,7 @@
                   </div>
                   <div
                     id="created-at"
-                    class="text-white font-black text-xl tracking-tighter mt-1 leading-none"
+                    class="text-white font-black text-xl tracking-normal mt-1 leading-none"
                   >
                     --
                   </div>
@@ -1349,290 +1990,6 @@
     </section>
 
     <section
-      id="projects"
-      class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden"
-    >
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-black"
-          style="-webkit-text-stroke: 3px black"
-        >
-          Selected Works
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <article
-            class="reveal group bg-white border-4 border-black p-4 shadow-hard"
-          >
-            <div
-              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
-            >
-              <img
-                src="Assets/images/deadlock_tracker_sample.png"
-                alt="Deadlock Tracker preview"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-start">
-              <div>
-                <h3
-                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover"
-                >
-                  Deadlock Tracker
-                </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
-                  10-page, 45-component analytics platform consuming Steam and
-                  Deadlock APIs, featuring player search, hero/item win rates
-                  across rank brackets, 5-region leaderboards, and match
-                  scoreboards with per-player item builds.
-                </p>
-                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                  <span class="bg-neo-black text-white px-2 py-1">Next.js</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >TypeScript</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1">Prisma</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >PostgreSQL</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1">Redis</span>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <a
-                  href="https://dltracker.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-12 h-12 border-2 border-black bg-neo-blue flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-                >
-                  <i class="ri-global-line text-2xl"></i>
-                </a>
-                <a
-                  href="https://github.com/migueljbeltran/deadlock-tracker"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-                >
-                  <i class="ri-github-fill text-2xl"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20"
-          >
-            <div
-              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
-            >
-              <img
-                src="Assets/images/song_pop_pred_sample.png"
-                alt="Song Popularity Predictor preview"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-start">
-              <div>
-                <h3
-                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover"
-                >
-                  Song Popularity Predictor
-                </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
-                  Benchmarked 5 models on 32,000+ Spotify tracks; engineered
-                  artist popularity and genre features with GridSearchCV tuning,
-                  boosting Random Forest to 80% accuracy (AUC 0.79).
-                </p>
-                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                  <span class="bg-neo-black text-white px-2 py-1">Python</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >TensorFlow</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >XGBoost</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >scikit-learn</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1">Pandas</span>
-                  <span class="bg-neo-black text-white px-2 py-1">NumPy</span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/Rytham1/song-popularity-predictor"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-              >
-                <i class="ri-arrow-right-up-line text-2xl"></i>
-              </a>
-            </div>
-          </article>
-
-          <article
-            class="reveal group bg-white border-4 border-black p-4 shadow-hard"
-          >
-            <div
-              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
-            >
-              <img
-                src="Assets/images/kitch_sample.png"
-                alt="Kitch preview"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-start">
-              <div>
-                <h3
-                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover"
-                >
-                  Kitch
-                </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
-                  Full-stack kitchen management app with a 15-endpoint Spring
-                  Boot REST API across 3 controllers, 3-layer MVC architecture,
-                  and a normalized 3-table schema. Eliminated N+1 queries with
-                  JPQL fetch joins.
-                </p>
-                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                  <span class="bg-neo-black text-white px-2 py-1">Java</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >Spring Boot</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1">React</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >Tailwind</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1">H2</span>
-                  <span class="bg-neo-black text-white px-2 py-1">Vite</span>
-                </div>
-              </div>
-              <a
-                href="https://github.com/migueljbeltran/Kitch"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-              >
-                <i class="ri-arrow-right-up-line text-2xl"></i>
-              </a>
-            </div>
-          </article>
-
-          <article
-            class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20"
-          >
-            <div
-              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
-            >
-              <img
-                src="Assets/images/8BitCPU_Sample.png"
-                alt="8-Bit CPU preview"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-start">
-              <div>
-                <h3
-                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover"
-                >
-                  8-Bit CPU
-                </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
-                  5-stage pipelined 8-bit CPU with data forwarding and hazard
-                  detection, correctly executing 20+ custom ISA instructions
-                  with zero pipeline stalls on forwarded operands.
-                </p>
-                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                  <span class="bg-neo-black text-white px-2 py-1">Logisim</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >Digital Logic</span
-                  >
-                </div>
-              </div>
-              <a
-                href="https://github.com/migueljbeltran/8bit-cpu"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-              >
-                <i class="ri-arrow-right-up-line text-2xl"></i>
-              </a>
-            </div>
-          </article>
-
-          <article
-            class="reveal group bg-white border-4 border-black p-4 shadow-hard"
-          >
-            <div
-              class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
-            >
-              <img
-                src="Assets/images/Questify_sample.png"
-                alt="Questify preview"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="flex justify-between items-start">
-              <div>
-                <h3
-                  class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover"
-                >
-                  Questify
-                </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
-                  Gamified productivity platform with XP progression and
-                  achievement system. Full stack app with Supabase auth,
-                  real-time sync, and CI/CD via GitHub Actions.
-                </p>
-                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
-                  <span class="bg-neo-black text-white px-2 py-1">Next.js</span>
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >TypeScript</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >Supabase</span
-                  >
-                  <span class="bg-neo-black text-white px-2 py-1"
-                    >PostgreSQL</span
-                  >
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <a
-                  href="https://questify-alpha.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-12 h-12 border-2 border-black bg-neo-blue flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-                >
-                  <i class="ri-global-line text-2xl"></i>
-                </a>
-                <a
-                  href="https://github.com/migueljbeltran/Questify"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-12 h-12 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"
-                >
-                  <i class="ri-github-fill text-2xl"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="text-center mt-24">
-          <a
-            href="https://github.com/migueljbeltran?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-black transition-all shadow-hard hover:shadow-none cursor-hover"
-          >
-            VIEW ALL REPOS ON GITHUB
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section
       id="reports"
       class="py-24 bg-neo-black border-t-4 border-black overflow-hidden relative"
     >
@@ -1652,7 +2009,7 @@
             ></div>
           </div>
           <h2
-            class="font-mono text-white text-xl font-bold ml-4 tracking-tighter"
+            class="font-mono text-white text-xl font-bold ml-4 tracking-normal"
           >
             me.txt
           </h2>
@@ -1683,15 +2040,16 @@
               <div class="text-[10px] font-mono text-gray-500">GAMING</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: FPS // MOBA // RPG
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              Valorant, Overwatch, Apex, Deadlock for the aim. League and Dota
-              for the brain rot. Destiny, Elder Scrolls, Fallout, Monster
-              Hunter, and Titanfall for the soul. Also yes, I play gacha games.
-              No I will not elaborate.
+              I like games that give me something to chase. Sometimes that is
+              aim training in Valorant, Overwatch, Apex, or Deadlock. Sometimes
+              it is a long RPG night with Destiny, Elder Scrolls, Fallout,
+              Monster Hunter, or Titanfall. I also play gacha games, mostly
+              because I enjoy collecting tiny goals.
             </p>
             <div class="flex text-neo-green/60 gap-1 text-lg">
               <i class="ri-gamepad-fill"></i><i class="ri-sword-fill"></i
@@ -1715,14 +2073,15 @@
               <div class="text-[10px] font-mono text-gray-500">MEDIA</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: ANIME // MOVIES
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              Anime watcher. Movie enjoyer. The kind of person who will pause
-              mid-conversation to recommend you something you didn't ask for.
-              My watchlist is longer than my codebase and growing faster.
+              Anime and movies are my favorite way to reset my brain. I like
+              stories with style, heart, and a little melodrama. If something
+              sticks with me, I will probably try to recommend it with too much
+              detail and too much excitement.
             </p>
             <div class="flex text-neo-blue/60 gap-1 text-lg">
               <i class="ri-movie-2-fill"></i><i class="ri-film-fill"></i
@@ -1746,15 +2105,15 @@
               <div class="text-[10px] font-mono text-gray-500">FOOD</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: COOKING // FOOD CRAWLS
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              I cook and I hunt for good restaurants. Food crawls are a love
-              language. If I'm travelling somewhere new, the first thing I
-              research isn't the sights — it's where to eat. Will drive 40
-              minutes for a good bowl of ramen. No regrets.
+              I like cooking for people and finding places that feel worth the
+              trip. Food crawls are one of my favorite ways to learn a city. If
+              I am travelling somewhere new, I am probably researching where to
+              eat before anything else.
             </p>
             <div class="flex text-neo-pink/60 gap-1 text-lg">
               <i class="ri-restaurant-fill"></i><i class="ri-fire-fill"></i
@@ -1778,15 +2137,15 @@
               <div class="text-[10px] font-mono text-gray-500">MUSIC</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: RAP // J-POP // EDM // 2010s POP
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              My playlist is a war crime. Rap into J-pop into EDM into a 2012
-              pop song that just hit different at 2am. The shuffle is
-              unhinged and I wouldn't have it any other way. Nostalgia is a
-              feature, not a bug.
+              My playlists jump from rap to J-pop to EDM to 2010s pop, and I
+              like that they do not make perfect sense. I also just started
+              learning electric guitar, so right now I am in the charming
+              phase where every clean chord feels like a small victory.
             </p>
             <div class="flex text-neo-purple/60 gap-1 text-lg">
               <i class="ri-headphone-fill"></i><i class="ri-music-fill"></i
@@ -1810,15 +2169,15 @@
               <div class="text-[10px] font-mono text-gray-500">LIFE</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: CATS // HEDGEHOGS // SLEEP // TRAVEL
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              Cat person. Hedgehog enthusiast. Professional sleeper. I
-              recharge by travelling somewhere new, finding a hole-in-the-wall
-              spot, and eating until I can't move. Then I sleep. Then I do it
-              again.
+              I recharge through small rituals: a good meal, a new place to
+              walk around, a quiet night, or a trip that gives me a story to
+              bring back. I am happiest when there is something cozy to do and
+              something new to look forward to.
             </p>
             <div class="flex text-neo-orange/60 gap-1 text-lg">
               <i class="ri-bear-smile-fill"></i><i class="ri-zzz-fill"></i
@@ -1843,15 +2202,16 @@
               <div class="text-[10px] font-mono text-gray-500">GAMING</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: FPS // MOBA // RPG
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              Valorant, Overwatch, Apex, Deadlock for the aim. League and Dota
-              for the brain rot. Destiny, Elder Scrolls, Fallout, Monster
-              Hunter, and Titanfall for the soul. Also yes, I play gacha games.
-              No I will not elaborate.
+              I like games that give me something to chase. Sometimes that is
+              aim training in Valorant, Overwatch, Apex, or Deadlock. Sometimes
+              it is a long RPG night with Destiny, Elder Scrolls, Fallout,
+              Monster Hunter, or Titanfall. I also play gacha games, mostly
+              because I enjoy collecting tiny goals.
             </p>
             <div class="flex text-neo-green/60 gap-1 text-lg">
               <i class="ri-gamepad-fill"></i><i class="ri-sword-fill"></i
@@ -1875,14 +2235,15 @@
               <div class="text-[10px] font-mono text-gray-500">MEDIA</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: ANIME // MOVIES
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              Anime watcher. Movie enjoyer. The kind of person who will pause
-              mid-conversation to recommend you something you didn't ask for.
-              My watchlist is longer than my codebase and growing faster.
+              Anime and movies are my favorite way to reset my brain. I like
+              stories with style, heart, and a little melodrama. If something
+              sticks with me, I will probably try to recommend it with too much
+              detail and too much excitement.
             </p>
             <div class="flex text-neo-blue/60 gap-1 text-lg">
               <i class="ri-movie-2-fill"></i><i class="ri-film-fill"></i
@@ -1906,15 +2267,15 @@
               <div class="text-[10px] font-mono text-gray-500">FOOD</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: COOKING // FOOD CRAWLS
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              I cook and I hunt for good restaurants. Food crawls are a love
-              language. If I'm travelling somewhere new, the first thing I
-              research isn't the sights — it's where to eat. Will drive 40
-              minutes for a good bowl of ramen. No regrets.
+              I like cooking for people and finding places that feel worth the
+              trip. Food crawls are one of my favorite ways to learn a city. If
+              I am travelling somewhere new, I am probably researching where to
+              eat before anything else.
             </p>
             <div class="flex text-neo-pink/60 gap-1 text-lg">
               <i class="ri-restaurant-fill"></i><i class="ri-fire-fill"></i
@@ -1938,15 +2299,15 @@
               <div class="text-[10px] font-mono text-gray-500">MUSIC</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: RAP // J-POP // EDM // 2010s POP
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              My playlist is a war crime. Rap into J-pop into EDM into a 2012
-              pop song that just hit different at 2am. The shuffle is
-              unhinged and I wouldn't have it any other way. Nostalgia is a
-              feature, not a bug.
+              My playlists jump from rap to J-pop to EDM to 2010s pop, and I
+              like that they do not make perfect sense. I also just started
+              learning electric guitar, so right now I am in the charming
+              phase where every clean chord feels like a small victory.
             </p>
             <div class="flex text-neo-purple/60 gap-1 text-lg">
               <i class="ri-headphone-fill"></i><i class="ri-music-fill"></i
@@ -1970,15 +2331,15 @@
               <div class="text-[10px] font-mono text-gray-500">LIFE</div>
             </div>
             <div
-              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-tight"
+              class="font-mono text-gray-400 text-[10px] mb-2 uppercase tracking-normal"
             >
               TAG: CATS // HEDGEHOGS // SLEEP // TRAVEL
             </div>
             <p class="font-bold text-xl leading-snug mb-6 text-white/90">
-              Cat person. Hedgehog enthusiast. Professional sleeper. I
-              recharge by travelling somewhere new, finding a hole-in-the-wall
-              spot, and eating until I can't move. Then I sleep. Then I do it
-              again.
+              I recharge through small rituals: a good meal, a new place to
+              walk around, a quiet night, or a trip that gives me a story to
+              bring back. I am happiest when there is something cozy to do and
+              something new to look forward to.
             </p>
             <div class="flex text-neo-orange/60 gap-1 text-lg">
               <i class="ri-bear-smile-fill"></i><i class="ri-zzz-fill"></i
@@ -2116,8 +2477,9 @@
         <div class="col-span-1 md:col-span-2">
           <h2 class="text-4xl font-black mb-6">MIGUEL BELTRAN</h2>
           <p class="text-gray-400 max-w-sm">
-            CS @ UC Davis. Building full stack apps with raw aesthetics. No
-            cookies, no trackers, just code.
+            CS @ UC Davis. Building full-stack platforms, backend systems, and
+            ML pipelines with raw aesthetics. No cookies, no trackers, just
+            code.
           </p>
         </div>
 
@@ -2196,7 +2558,7 @@
       </div>
 
       <div
-        class="absolute bottom-0 left-0 w-full text-[20vw] font-black text-white opacity-[0.03] leading-none select-none pointer-events-none text-center"
+        class="absolute bottom-0 left-0 w-full text-8xl md:text-[12rem] font-black text-white opacity-[0.03] leading-none select-none pointer-events-none text-center"
       >
         BRUTAL
       </div>

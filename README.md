@@ -12,7 +12,7 @@
 
 ## /// ABOUT
 
-Personal portfolio for **Miguel Beltran** — CS student at UC Davis and Full Stack Developer. Built with a Neo-Brutalist design philosophy: high contrast, raw typography, asymmetrical layouts, bold on purpose.
+Personal portfolio for **Miguel Beltran**, UC Davis Computer Science student and Software Engineer building full-stack platforms, backend systems, and Artificial Intelligence / Machine Learning pipelines. Built with a Neo-Brutalist design philosophy: high contrast, raw typography, asymmetrical layouts, bold on purpose.
 
 ---
 
@@ -31,12 +31,17 @@ Personal portfolio for **Miguel Beltran** — CS student at UC Davis and Full St
 
 ## /// FEATURES
 
-- **Custom Cursor** — Reactive crosshair that transforms on hover
-- **Glitch Effects** — CSS-only glitch animations with `mix-blend-mode: difference`
-- **Marquee Scroll** — Infinite scrolling text banners in both directions
-- **Scroll Reveal** — Elements animate in via `IntersectionObserver`
-- **Live GitHub Stats** — Real-time repos, followers, commits, and contribution graph
-- **Journal Section** — Personal hobby/interest log displayed as a scrolling marquee
+- **Custom Cursor**: Reactive crosshair that transforms on hover
+- **Glitch Effects**: CSS-only glitch animations with `mix-blend-mode: difference`
+- **Marquee Scroll**: Infinite scrolling text banners in both directions
+- **Scroll Reveal**: Elements animate in via `IntersectionObserver`
+- **Hero System Panel**: High-energy intro with role tags, metrics, and current focus areas
+- **Featured Work Layout**: Larger priority cards for dltracker and Picnic Day Scheduler with live/source actions
+- **Grouped Skills**: Scannable skill clusters with a dense desktop matrix for detail
+- **Artificial Intelligence / Machine Learning Surface**: Dedicated model tooling cluster for TensorFlow, PyTorch, XGBoost, scikit-learn, Pandas, and NumPy
+- **Live GitHub Stats**: Real-time repos, followers, commits, and contribution graph
+- **Resume-Aligned Content**: Education, experience, selected projects, and skills synced with the resume PDF
+- **Journal Section**: Personal hobby/interest log displayed as a scrolling marquee
 
 ---
 
@@ -44,10 +49,11 @@ Personal portfolio for **Miguel Beltran** — CS student at UC Davis and Full St
 
 | PROJECT | STACK |
 | :--- | :--- |
-| **8-Bit CPU** | Logisim, Digital Logic |
-| **Deadlock Tracker** | Next.js, TypeScript, Prisma, PostgreSQL |
-| **Questify** | Next.js, TypeScript, Supabase, PostgreSQL |
-| **Kitch** | Java, Spring Boot, React, Tailwind, H2, Vite |
+| **dltracker** | Next.js 16, TypeScript, PostgreSQL, Redis |
+| **Picnic Day Scheduler** | React, TypeScript, SQLite, Leaflet, Mapbox, Docker |
+| **Song Popularity Predictor** | Python, TensorFlow, XGBoost, scikit-learn, pytest |
+| **Kitch** | Java, Spring Boot, FastAPI, React, Tailwind, H2, Vite |
+| **8-Bit CPU** | Logisim, Computer Architecture |
 
 ---
 
