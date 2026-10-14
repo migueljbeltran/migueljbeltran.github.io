@@ -23,12 +23,13 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 - Clean hero with resume download and project-first calls to action
 - Tasteful motion through slow hero shapes, subtle status animation, and restrained hover states
 - Terminal-inspired loadout with a separate language layer and grouped frontend, backend, data, delivery, and ML panels
+- Recruiter-first reading order: hero, projects, experience, skills, About/education, interests, contact
 - Experience Log directly after selected projects, with live project links in Selected Works
 - Mobile navigation, visible keyboard focus, custom desktop cursor with native touch, keyboard, and reduced-motion behavior, and reduced-motion support
 - UC Davis IET advising-system experience and current resume download
 - Featured project cards with real impact, personal context, and technical depth
 - Resume-aligned experience, curated skills, education, and selected work
-- Personal build-notes section instead of fragile live GitHub widgets
+- Compact build notes within About, after project and experience evidence
 - Responsive neo-brutalist layout with local screenshots and direct project links
 - Contact form powered by Web3Forms
 
@@ -53,6 +54,18 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 ├── index.html           # Main static portfolio
 └── README.md            # Repo overview
 ```
+
+## /// CONTACT
+
+## /// VALIDATION
+
+Run the browser-compatibility regression checks with Node.js:
+
+```sh
+node --test tests/browser-compat.test.cjs
+```
+
+These checks verify contact submission initialization for modern and legacy media-query listeners and the native POST fallback.
 
 ## /// CONTACT
 
