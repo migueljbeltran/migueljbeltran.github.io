@@ -6,7 +6,7 @@
 >> BUILT_BY: MIGUEL BELTRAN
 ```
 
-Personal portfolio for **Miguel Beltran**, focused on full-stack software, useful interfaces, React and TypeScript frontends, Java/Spring Boot and Python/FastAPI backends, data workflows, and projects with real people on the other side.
+Personal portfolio for **Miguel Beltran**, focused on full-stack software, useful interfaces, React and TypeScript frontends, C#/.NET, Java/Spring Boot, and Python backends, data workflows, and projects with real people on the other side.
 
 ## /// TECH_STACK
 
@@ -22,7 +22,9 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 
 - Clean hero with resume download and project-first calls to action
 - Tasteful motion through slow hero shapes, subtle status animation, and restrained hover states
-- Compact curated tool matrix with the original terminal-like personality
+- Six focused skill groups with the original terminal-like personality
+- Mobile navigation, visible keyboard focus, native cursor, and reduced-motion support
+- UC Davis IET advising-system experience and current resume download
 - Featured project cards with real impact, personal context, and technical depth
 - Resume-aligned experience, curated skills, education, and selected work
 - Personal build-notes section instead of fragile live GitHub widgets
