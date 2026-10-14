@@ -7,44 +7,39 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Miguel Beltran | Full-stack software engineer building React and TypeScript frontends, Java/Spring Boot and Python/FastAPI backends, data workflows, and tested user-facing platforms."
+      content="Miguel Beltran | Full-stack software engineer building React and TypeScript frontends, C#/.NET, Java/Spring Boot, and Python backends, data workflows, and tested user-facing platforms."
     />
     <meta
       name="keywords"
       content="Miguel Beltran, Software Engineer, Computer Science, UC Davis, React, Next.js, Python, TypeScript, JavaScript, FastAPI, Spring Boot, Prisma, Java, PostgreSQL, SQLite, Redis, AWS, Docker, Pytest, Playwright, Vitest, Artificial Intelligence, Machine Learning, Data Science"
     />
     <meta name="author" content="Miguel Beltran" />
-    <link rel="canonical" href="https://migueljbeltran.github.io/miguel-beltran.exe/" />
+    <link rel="canonical" href="https://migueljbeltran.github.io/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://migueljbeltran.github.io/miguel-beltran.exe/" />
+    <meta property="og:url" content="https://migueljbeltran.github.io/" />
     <meta property="og:title" content="miguel-beltran.exe" />
     <meta
       property="og:description"
-      content="Full-stack software engineer building React and TypeScript frontends, Java/Spring Boot and Python/FastAPI backends, data workflows, and tested user-facing platforms."
+      content="Full-stack software engineer building React and TypeScript frontends, C#/.NET, Java/Spring Boot, and Python backends, data workflows, and tested user-facing platforms."
     />
-    <meta property="og:image" content="Assets/images/thumbnail.png" />
+    <meta property="og:image" content="https://migueljbeltran.github.io/Assets/images/thumbnail.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://migueljbeltran.github.io/miguel-beltran.exe/" />
+    <meta property="twitter:url" content="https://migueljbeltran.github.io/" />
     <meta property="twitter:title" content="miguel-beltran.exe" />
     <meta
       property="twitter:description"
-      content="Full-stack software engineer building React and TypeScript frontends, Java/Spring Boot and Python/FastAPI backends, data workflows, and tested user-facing platforms."
+      content="Full-stack software engineer building React and TypeScript frontends, C#/.NET, Java/Spring Boot, and Python backends, data workflows, and tested user-facing platforms."
     />
-    <meta property="twitter:image" content="Assets/images/thumbnail.png" />
+    <meta property="twitter:image" content="https://migueljbeltran.github.io/Assets/images/thumbnail.png" />
 
-    <title>miguel-beltran.exe</title>
+    <title>Miguel Beltran | Software Engineer</title>
 
     <!-- Theme & Performance -->
     <meta name="theme-color" content="#121212" />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@800&display=swap"
-      as="style"
-    />
 
     <!-- JSON-LD Structured Data for Search Engines -->
     <script type="application/ld+json">
@@ -52,7 +47,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Miguel Beltran",
-        "url": "https://migueljbeltran.github.io/miguel-beltran.exe/",
+        "url": "https://migueljbeltran.github.io/",
         "jobTitle": "Software Engineer",
         "knowsAbout": [
           "React",
@@ -61,6 +56,8 @@
           "TypeScript",
           "JavaScript",
           "Java",
+          "C#",
+          ".NET Framework",
           "Go",
           "C/C++",
           "FastAPI",
@@ -83,7 +80,7 @@
           "https://github.com/migueljbeltran",
           "https://www.linkedin.com/in/miguel-j-beltran"
         ],
-        "description": "Full-stack software engineer with experience building React and TypeScript frontends, Java/Spring Boot and Python/FastAPI backends, data workflows, and tested user-facing platforms."
+        "description": "Full-stack software engineer with experience building React and TypeScript frontends, C#/.NET, Java/Spring Boot, and Python backends, data workflows, and tested user-facing platforms."
       }
     </script>
 
@@ -137,7 +134,7 @@
     <style>
       /* Base Styles */
       body {
-        cursor: none;
+        cursor: auto;
         /* We use a custom cursor */
         background-color: #fffdf5;
         background-image:
@@ -177,6 +174,9 @@
       .marquee-container:hover .marquee-content {
         animation-play-state: paused;
       }
+      .marquee-container:focus-within .marquee-content {
+        animation-play-state: paused;
+      }
 
       .marquee-content-reverse {
         display: inline-block;
@@ -205,8 +205,8 @@
 
       /* Reveal Animation */
       .reveal {
-        opacity: 0;
-        transform: translateY(40px);
+        opacity: 1;
+        transform: none;
         transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
       }
 
@@ -384,15 +384,100 @@
           scroll-behavior: auto !important;
         }
       }
+
+      /* Keep the bold identity while giving the content room to breathe. */
+      section[id] { scroll-margin-top: 110px; }
+      :focus-visible { outline: 3px solid #3B82F6; outline-offset: 5px; }
+
+      .hero-note { transform: none !important; line-height: 1.7; }
+      #experience li { line-height: 1.7; }
+      #experience li + li { margin-top: .65rem; }
+      #experience h3 { line-height: 1.15; }
+
+      #experience > h2 { font-size: clamp(2rem, 7vw, 5rem); }
+      #contact a[href^="mailto:"] { overflow-wrap: anywhere; }
+      #experience .text-neo-green { color: #166534; }
+      #experience .text-neo-orange { color: #9a3412; }
+      h1 { font-size: clamp(2.9rem, 9.5vw, 8rem) !important; line-height: .95 !important; }
+      #projects h2 { font-size: clamp(2.75rem, 8vw, 7rem) !important; line-height: 1.05; }
+      .skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; background: #FBFF48; padding: 12px 20px; border: 2px solid black; }
+      .skip-link:focus { top: 12px; }
+      .mobile-menu { display: none; }
+      @media (max-width: 767px) {
+        nav > div { flex-wrap: wrap; gap: 12px; }
+        nav > div > div:first-child { width: 100%; justify-content: space-between; }
+        nav > div > div:first-child > a { font-size: .8rem; white-space: nowrap; padding-inline: 10px; }
+        .mobile-menu { display: block; width: 100%; background: #fffdf5; border: 2px solid black; padding: 8px 12px; box-shadow: 2px 2px 0 black; }
+        .mobile-menu summary { font-family: 'JetBrains Mono', monospace; font-size: .8rem; font-weight: 700; cursor: pointer; }
+        .mobile-menu div { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 12px; }
+        .mobile-menu a { font-size: .85rem; padding: 6px; }
+        body > section:first-of-type { padding-top: 170px; }
+        #about h2 { font-size: 2.75rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal, .project-card, .project-card img { transition: none; }
+        .marquee-content, .marquee-content-reverse { animation: none; }
+        #reports .marquee-container { overflow-x: auto; }
+        #reports .marquee-content > [aria-hidden="true"] { display: none; }
+      }
+
+      .stack-section { padding: 88px 24px; background: #121212; color: #fffdf5; border-block: 4px solid #000; background-image: linear-gradient(#ffffff06 1px, transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px); background-size: 36px 36px; }
+      .stack-header { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; padding-bottom:28px; }
+      .stack-eyebrow { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; color:#a1a1aa; margin-bottom:16px; }
+      .stack-eyebrow span { display:inline-block; width:8px; height:8px; margin-right:8px; background:#33ff57; box-shadow:0 0 12px #33ff5780; }
+      #skills h2 { font-size:clamp(2.5rem,7vw,6rem); font-weight:900; line-height:1; letter-spacing:-.055em; }
+      #skills h2 > span { color:#33ff57; }
+      .stack-intro { color:#a1a1aa; font-size:14px; line-height:1.8; max-width:300px; }
+      .stack-intro strong { color:#fffdf5; font-weight:500; }
+      .language-rail { border-block:1px solid #ffffff30; padding:20px 0; display:flex; align-items:center; gap:24px; margin-bottom:32px; }
+      .language-label { font:700 11px 'JetBrains Mono',monospace; white-space:nowrap; color:#33ff57; }
+      .language-rail > div { display:flex; flex-wrap:wrap; gap:8px; }
+      .language-chip { font:500 12px 'JetBrains Mono',monospace; color:#d4d4d8; padding:5px 10px; border:1px solid #ffffff30; background:#1b1b1b; }
+      .stack-layout { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:24px; }
+      .stack-bay { grid-column:span 2; border:1px solid #ffffff24; border-top:4px solid var(--bay-color); padding:24px; background:#1a1a1a; box-shadow:6px 6px 0 #000; position:relative; transition:transform .2s,border-color .2s; }
+      .stack-bay:nth-child(-n+2) { grid-column:span 3; }
+      .stack-bay:hover { border-color:var(--bay-color); transform:translateY(-4px); }
+      .stack-bay-head { display:flex; justify-content:space-between; align-items:center; color:#121212; background:var(--bay-color); margin:-24px -24px 24px; padding:12px 24px; }
+      .stack-index { font:700 11px 'JetBrains Mono',monospace; letter-spacing:.04em; }
+      .stack-bay-head i { font-size:24px; }
+      .stack-bay h3 { font-size:clamp(1.5rem,2.2vw,2.1rem); font-weight:700; line-height:1.15; letter-spacing:-.035em; margin-bottom:10px; }
+      .stack-context { color:#a1a1aa; font-size:13px; line-height:1.6; min-height:42px; margin-bottom:22px; max-width:420px; }
+      .stack-tools { display:flex; flex-wrap:wrap; gap:7px; }
+      .stack-tools + .stack-tools { margin-top:12px; padding-top:12px; border-top:1px dashed #ffffff20; }
+      .stack-tool { font:500 12px 'JetBrains Mono',monospace; color:#f4f4f5; border:1px solid #ffffff25; padding:9px 11px; background:#121212; transition:background .15s,color .15s,border-color .15s; }
+      .stack-tool:hover { color:#121212; background:var(--bay-color); border-color:var(--bay-color); }
+      .stack-footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; margin-top:32px; font:500 10px 'JetBrains Mono',monospace; letter-spacing:.06em; color:#a1a1aa; }
+      #cursor { display:none; width:20px; height:20px; border:2px solid #fff; border-radius:50%; background:#fff; mix-blend-mode:difference; left:0; top:0; transition:width .15s,height .15s,border-radius .15s; }
+      #cursor.is-hovering { width:44px; height:44px; background:transparent; border-color:#fbff48; mix-blend-mode:difference; }
+      @media (pointer:fine) and (hover:hover) and (prefers-reduced-motion:no-preference) {
+        html.custom-cursor-ready, html.custom-cursor-ready * { cursor:none !important; }
+        html.custom-cursor-ready #cursor { display:block; }
+      }
+      @media (max-width:900px) {
+        .stack-header { align-items:flex-start; flex-direction:column; gap:16px; }
+        .stack-layout { grid-template-columns:repeat(2,minmax(0,1fr)); }
+        .stack-bay, .stack-bay:nth-child(-n+2) { grid-column:auto; }
+        .stack-bay:last-child { grid-column:1/-1; }
+        .language-rail { flex-direction:column; align-items:flex-start; gap:14px; }
+      }
+      @media (max-width:560px) {
+        .stack-section { padding:64px 16px; }
+        .stack-layout { grid-template-columns:minmax(0,1fr); gap:20px; }
+        .stack-bay { padding:20px; }
+        .stack-bay-head { margin:-20px -20px 20px; padding:12px 20px; }
+        .stack-context { min-height:0; }
+      }
+      @media (prefers-reduced-motion:reduce) { .stack-bay,.stack-tool { transition:none; } .stack-bay:hover { transform:none; } }
     </style>
   </head>
 
   <body
     class="text-neo-black font-display antialiased selection:bg-neo-black selection:text-neo-yellow"
   >
+    <a class="skip-link" href="#projects">Skip to content</a>
     <div
       id="cursor"
-      class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"
+      aria-hidden="true"
     ></div>
 
     <div
@@ -438,19 +523,9 @@
           class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard"
         >
           <a
-            href="#about"
-            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
-            >/ABOUT</a
-          >
-          <a
             href="#projects"
             class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
             >/WORK</a
-          >
-          <a
-            href="#skills"
-            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
-            >/SKILLS</a
           >
           <a
             href="#experience"
@@ -458,11 +533,25 @@
             >/LOGS</a
           >
           <a
+            href="#skills"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/SKILLS</a
+          >
+          <a
+            href="#about"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/ABOUT</a
+          >
+          <a
             href="#contact"
             class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover"
             >CONTACT ME</a
           >
         </div>
+        <details class="mobile-menu">
+          <summary>EXPLORE / MENU</summary>
+          <div><a href="#projects">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+        </details>
       </div>
     </nav>
 
@@ -483,6 +572,7 @@
 
       <div class="relative z-10 max-w-6xl mx-auto">
         <div class="text-left">
+          <p class="font-mono text-sm font-bold mb-5 tracking-wide">MIGUEL BELTRAN / UC DAVIS CS · JUNE 2027</p>
           <div
             class="inline-flex flex-wrap items-center gap-2 bg-neo-white border-2 border-black px-4 py-2 mb-6 shadow-hard rotate-[-2deg] reveal font-mono font-bold text-sm"
           >
@@ -510,12 +600,10 @@
           <p
             class="hero-note font-mono text-lg md:text-xl max-w-3xl mb-8 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1"
           >
-            I build across the stack: React, Next.js, and TypeScript on the
-            frontend, with Java/Spring Boot and Python/FastAPI on the backend.
-            Recent work spans a live UC Davis Picnic Day platform for one of
-            the nation&apos;s largest student-run events with 70,000+ yearly
-            attendees, a Deadlock analytics app used by 1,000+ users, and an
-            ML classifier over 32,000+ Spotify tracks.
+            I build software people rely on, from C#/.NET advising systems at
+            UC Davis to React and TypeScript interfaces, event tools, and game
+            analytics. I care about clear interfaces, dependable data, and
+            testing the paths that matter.
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8 reveal">
@@ -523,13 +611,14 @@
               <div class="font-mono text-xs font-bold text-gray-500">
                 CURRENT_ROLE
               </div>
-              <div class="font-black text-lg">Assistant Technical Director</div>
+              <div class="font-black text-lg">Junior Application Developer</div>
+              <p class="font-mono text-xs mt-1">UC Davis IET</p>
             </div>
             <div class="bg-white border-2 border-black p-3 shadow-hard-sm">
               <div class="font-mono text-xs font-bold text-gray-500">
-                PRODUCTION_REACH
+                ADVISING_SYSTEMS
               </div>
-              <div class="font-black text-lg">70,000+ event attendees</div>
+              <div class="font-black text-lg">31,000+ undergraduates</div>
             </div>
             <div class="bg-white border-2 border-black p-3 shadow-hard-sm">
               <div class="font-mono text-xs font-bold text-gray-500">
@@ -569,85 +658,11 @@
       <div class="marquee-container font-mono font-bold text-2xl text-white">
         <div class="marquee-content">
           /// FULL-STACK SOFTWARE ENGINEERING /// REACT /// NEXT.JS ///
-          TYPESCRIPT /// PYTHON /// JAVA /// GO /// BACKEND APIS /// DATA
+          TYPESCRIPT /// C# / .NET /// PYTHON /// JAVA /// BACKEND APIS /// DATA
           PIPELINES /// PLAYWRIGHT /// VITEST /// DOCKER ///
         </div>
       </div>
     </div>
-
-    <section
-      id="about"
-      class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-        <div class="md:col-span-4 reveal">
-          <div
-            class="aspect-square bg-neo-black border-4 border-black relative shadow-hard overflow-hidden group"
-          >
-            <img
-              src="Assets/images/avatar.jpg"
-              alt="Miguel Beltran"
-              class="w-full h-full object-cover"
-            />
-            <span
-              class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-black z-10"
-              >AVATAR.JPG</span
-            >
-          </div>
-        </div>
-        <div class="md:col-span-8 flex flex-col justify-center reveal">
-          <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
-          <p class="font-mono text-xl leading-relaxed mb-6">
-            I am Miguel. A CS student at
-            <span class="bg-neo-yellow px-1 border border-black">UC Davis</span>
-            focused on full-stack software engineering, with experience moving
-            between polished interfaces, backend services, data workflows, and
-            tested user-facing features.
-          </p>
-          <p
-            class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4"
-          >
-            > Assistant Technical Director for ASUCD Picnic Day.<br />
-            > Comfortable across React, TypeScript, Java/Spring Boot, and Python/FastAPI.<br />
-            > I like work that connects the frontend, backend, data, and tests.
-          </p>
-
-          <div class="flex flex-wrap gap-4">
-            <div
-              class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent"
-            >
-              📍 LOCATION: DAVIS, CA
-            </div>
-            <div
-              class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black"
-            >
-              🎓 UC DAVIS CS: EXPECTED JUNE 2027
-            </div>
-          </div>
-
-          <div
-            class="mt-8 bg-neo-white border-4 border-black p-5 shadow-hard font-mono"
-          >
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
-              <h3 class="text-2xl font-black uppercase font-display">
-                Education_Record
-              </h3>
-              <span class="bg-neo-black text-white px-2 py-1 text-xs font-bold"
-                >EXPECTED JUNE 2027</span
-              >
-            </div>
-            <p class="font-bold text-lg">University of California, Davis</p>
-            <p class="text-gray-700 mb-3">
-              Bachelor of Science in Computer Science
-            </p>
-            <p class="text-sm text-gray-600">
-              Coursework: Algorithms & Data Structures, Operating Systems,
-              Machine Learning, Artificial Intelligence, Computer Architecture
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section
       id="projects"
@@ -676,7 +691,7 @@
             >
               <img
                 src="Assets/images/deadlock_tracker_sample.png"
-                alt="Deadlock Tracker preview"
+                loading="lazy" alt="Deadlock Tracker preview"
                 class="w-full h-full object-cover"
               />
               <div
@@ -747,7 +762,7 @@
             >
               <img
                 src="Assets/images/picnicday_sample.png"
-                alt="Picnic Day Scheduler preview"
+                loading="lazy" alt="Picnic Day Scheduler preview"
                 class="w-full h-full object-cover"
               />
               <div
@@ -764,8 +779,8 @@
                   Picnic Day Scheduler
                 </h3>
                 <p class="font-mono text-sm mb-4 max-w-xl">
-                  Production event platform for 70,000+ UC Davis Picnic Day
-                  attendees. Built React and TypeScript features for event
+                  Schedule Builder for UC Davis Picnic Day, an event with
+                  70,000+ attendees. Built React and TypeScript features for event
                   discovery, onboarding tutorials, calendar exports,
                   interactive maps, SQLite data, Google Sheets sync, Docker
                   onboarding, and exportable PDF schedules.
@@ -783,7 +798,7 @@
               </div>
               <div class="flex sm:flex-col gap-2 shrink-0">
                 <a
-                  href="https://picnicday.ucdavis.edu/"
+                  href="https://pd-schedule-builder.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Picnic Day Scheduler live site"
@@ -804,15 +819,35 @@
             </div>
           </article>
 
+          <article class="project-card reveal group bg-white border-4 border-black p-5 shadow-hard lg:col-span-3">
+            <div class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6">
+              <img src="Assets/images/sss_sample.jpg" alt="Space and Satellite Systems at UC Davis website" loading="lazy" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-neo-purple text-white border-2 border-black px-3 py-1 font-mono text-xs font-black">CLIENT WORK / #INCLUDE DAVIS</div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between gap-5">
+              <div class="min-w-0">
+                <h3 class="text-3xl md:text-4xl font-black uppercase mb-2">Space &amp; Satellite Systems</h3>
+                <p class="font-mono text-sm mb-4 max-w-xl">Delivered responsive React/Next.js features for the UC Davis Space and Satellite Systems website through #include Davis. Translated Figma designs into reusable components for desktop and mobile, with modular SCSS and optimized image rendering.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+                  <span class="bg-neo-black text-white px-2 py-1">React</span><span class="bg-neo-black text-white px-2 py-1">Next.js</span><span class="bg-neo-black text-white px-2 py-1">SCSS</span><span class="bg-neo-black text-white px-2 py-1">Figma</span>
+                </div>
+              </div>
+              <div class="flex sm:flex-col gap-2 shrink-0">
+                <a href="https://www.spacesystemsclub.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Space and Satellite Systems live website" class="w-14 h-14 border-2 border-black bg-neo-blue flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"><i class="ri-global-line text-2xl" aria-hidden="true"></i></a>
+                <a href="https://github.com/Space-and-Satellite-Systems-UC-Davis/sss-web-site" target="_blank" rel="noopener noreferrer" aria-label="Open Space and Satellite Systems source code" class="w-14 h-14 border-2 border-black bg-neo-green flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-hover shadow-hard-sm"><i class="ri-github-fill text-2xl" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
           <article
-            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-2"
+            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-3"
           >
             <div
               class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
             >
               <img
                 src="Assets/images/song_pop_pred_sample.png"
-                alt="Spotify Hit Classifier preview"
+                loading="lazy" alt="Spotify Hit Classifier preview"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -823,7 +858,7 @@
                 >
                   Spotify Hit Classifier
                 </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
+                <p class="font-mono text-sm mb-4 max-w-xl">
                   End-to-end ML classification pipeline over 32,000+ Spotify
                   tracks using scikit-learn, XGBoost, and TensorFlow.
                   Engineered artist, genre, and audio features with
@@ -857,14 +892,14 @@
           </article>
 
           <article
-            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-2"
+            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-3"
           >
             <div
               class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
             >
               <img
                 src="Assets/images/kitch_sample.png"
-                alt="Kitch preview"
+                loading="lazy" alt="Kitch preview"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -875,7 +910,7 @@
                 >
                   Kitch
                 </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
+                <p class="font-mono text-sm mb-4 max-w-xl">
                   Full-stack kitchen management app with a Spring Boot REST API
                   and React/Vite frontend for inventory, shopping lists, and
                   recipes. Designed controllers, services, repositories, DTOs,
@@ -907,14 +942,14 @@
           </article>
 
           <article
-            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-2"
+            class="project-card reveal group bg-white border-4 border-black p-4 shadow-hard lg:col-span-3"
           >
             <div
               class="bg-neo-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all"
             >
               <img
                 src="Assets/images/8BitCPU_Sample.png"
-                alt="8-Bit CPU preview"
+                loading="lazy" alt="8-Bit CPU preview"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -925,7 +960,7 @@
                 >
                   8-Bit CPU
                 </h3>
-                <p class="font-mono text-sm mb-4 max-w-xs">
+                <p class="font-mono text-sm mb-4 max-w-xl">
                   5-stage pipelined 8-bit CPU with data forwarding and hazard
                   detection, correctly executing 20+ custom ISA instructions
                   in Logisim.
@@ -964,846 +999,6 @@
       </div>
     </section>
 
-    <section
-      id="skills"
-      class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden"
-    >
-      <div
-        class="absolute inset-0 opacity-20"
-        style="
-          background-image:
-            linear-gradient(#333 1px, transparent 1px),
-            linear-gradient(90deg, #333 1px, transparent 1px);
-          background-size: 40px 40px;
-        "
-      ></div>
-
-      <div class="max-w-[1400px] mx-auto px-4 relative z-10">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4"
-        >
-          <h2
-            class="text-6xl md:text-8xl font-black uppercase text-white tracking-normal"
-          >
-            TECH<span class="text-neo-green">_STACK</span>
-          </h2>
-          <div class="flex items-center gap-2 mb-2 md:mb-4">
-            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            <p class="font-mono text-neo-green text-sm font-bold">
-              /// SYSTEM_OPTIMIZED
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5 mb-10">
-          <div class="reveal bg-white text-black border-4 border-white p-5 shadow-hard">
-            <div class="font-mono text-xs font-black text-neo-blue mb-3">
-              01 / FRONTEND
-            </div>
-            <h3 class="text-3xl font-black uppercase mb-4">Interfaces</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
-              <span class="bg-neo-black text-white px-2 py-1">React</span>
-              <span class="bg-neo-black text-white px-2 py-1">Next.js</span>
-              <span class="bg-neo-black text-white px-2 py-1">TypeScript</span>
-              <span class="bg-neo-black text-white px-2 py-1">Tailwind</span>
-            </div>
-          </div>
-          <div class="reveal bg-neo-green text-black border-4 border-white p-5 shadow-hard">
-            <div class="font-mono text-xs font-black mb-3">
-              02 / BACKEND
-            </div>
-            <h3 class="text-3xl font-black uppercase mb-4">Systems</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
-              <span class="bg-neo-black text-white px-2 py-1">Java</span>
-              <span class="bg-neo-black text-white px-2 py-1">Spring Boot</span>
-              <span class="bg-neo-black text-white px-2 py-1">Python</span>
-              <span class="bg-neo-black text-white px-2 py-1">FastAPI</span>
-              <span class="bg-neo-black text-white px-2 py-1">Node.js</span>
-              <span class="bg-neo-black text-white px-2 py-1">REST APIs</span>
-            </div>
-          </div>
-          <div class="reveal bg-neo-yellow text-black border-4 border-white p-5 shadow-hard">
-            <div class="font-mono text-xs font-black mb-3">
-              03 / DATA
-            </div>
-            <h3 class="text-3xl font-black uppercase mb-4">Storage</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
-              <span class="bg-neo-black text-white px-2 py-1">PostgreSQL</span>
-              <span class="bg-neo-black text-white px-2 py-1">SQLite</span>
-              <span class="bg-neo-black text-white px-2 py-1">Redis</span>
-              <span class="bg-neo-black text-white px-2 py-1">Prisma</span>
-              <span class="bg-neo-black text-white px-2 py-1">JPA</span>
-            </div>
-          </div>
-          <div class="reveal bg-neo-pink text-black border-4 border-white p-5 shadow-hard">
-            <div class="font-mono text-xs font-black mb-3">
-              04 / ARTIFICIAL INTELLIGENCE
-            </div>
-            <h3 class="text-3xl font-black uppercase mb-4">
-              Machine Learning
-            </h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
-              <span class="bg-neo-black text-white px-2 py-1">TensorFlow</span>
-              <span class="bg-neo-black text-white px-2 py-1">XGBoost</span>
-              <span class="bg-neo-black text-white px-2 py-1">scikit-learn</span>
-              <span class="bg-neo-black text-white px-2 py-1">Pandas</span>
-              <span class="bg-neo-black text-white px-2 py-1">NumPy</span>
-            </div>
-          </div>
-          <div class="reveal bg-neo-purple text-white border-4 border-white p-5 shadow-hard">
-            <div class="font-mono text-xs font-black mb-3">
-              05 / QUALITY
-            </div>
-            <h3 class="text-3xl font-black uppercase mb-4">Shipping</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
-              <span class="bg-neo-black text-white px-2 py-1">Docker</span>
-              <span class="bg-neo-black text-white px-2 py-1">pytest</span>
-              <span class="bg-neo-black text-white px-2 py-1">Playwright</span>
-              <span class="bg-neo-black text-white px-2 py-1">Vitest</span>
-              <span class="bg-neo-black text-white px-2 py-1">GitHub Actions</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="reveal border-4 border-white bg-black shadow-hard overflow-hidden mb-8"
-          aria-label="Curated tool matrix"
-        >
-          <div
-            class="flex items-center justify-between border-b-2 border-white/20 p-3 font-mono text-xs"
-          >
-            <span class="text-neo-green font-black">tool.matrix</span>
-            <span class="text-gray-500">curated / hover to scan</span>
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
-              <span class="font-black text-white group-hover:text-black text-xl">TYPESCRIPT</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">FRONTEND</span>
-              <span class="font-black text-white group-hover:text-black text-xl">REACT</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">FRAMEWORK</span>
-              <span class="font-black text-white group-hover:text-black text-xl">NEXT.JS</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
-              <span class="font-black text-white group-hover:text-black text-xl">JAVA</span>
-            </div>
-            <div class="group h-20 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">BACKEND</span>
-              <span class="font-black text-white group-hover:text-black text-lg">SPRING BOOT</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
-              <span class="font-black text-white group-hover:text-black text-xl">PYTHON</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">API</span>
-              <span class="font-black text-white group-hover:text-black text-xl">FASTAPI</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">DATABASE</span>
-              <span class="font-black text-white group-hover:text-black text-lg">POSTGRESQL</span>
-            </div>
-            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LOCAL DATA</span>
-              <span class="font-black text-white group-hover:text-black text-xl">SQLITE</span>
-            </div>
-            <div class="group h-20 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">CACHE</span>
-              <span class="font-black text-white group-hover:text-black text-xl">REDIS</span>
-            </div>
-            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">TESTING</span>
-              <span class="font-black text-white group-hover:text-black text-xl">PLAYWRIGHT</span>
-            </div>
-            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">TESTING</span>
-              <span class="font-black text-white group-hover:text-black text-xl">VITEST</span>
-            </div>
-            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">DEVOPS</span>
-              <span class="font-black text-white group-hover:text-black text-xl">DOCKER</span>
-            </div>
-            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">ML</span>
-              <span class="font-black text-white group-hover:text-black text-xl">XGBOOST</span>
-            </div>
-            <div class="group h-20 bg-neo-black hover:bg-neo-blue transition-all cursor-hover flex flex-col items-center justify-center p-2">
-              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">ML</span>
-              <span class="font-black text-white group-hover:text-black text-xl">PANDAS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hidden">
-          <!-- Languages -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              PYTHON
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              TYPESCRIPT
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              JAVASCRIPT
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              JAVA
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              C/C++
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              SQL
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              GO
-            </div>
-          </div>
-
-          <!-- Frameworks & Libraries -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LIBRARY
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              REACT
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ FRAMEWORK
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              NEXT.JS
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ FRAMEWORK
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              SPRING BOOT
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ FRAMEWORK
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              EXPRESS
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ FRAMEWORK
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              FLASK
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ FRAMEWORK
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              FASTAPI
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ BACKEND
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              NODE.JS
-            </div>
-          </div>
-
-          <!-- Data & ORM -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ DATABASE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              POSTGRESQL
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ BAAS
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              SUPABASE
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ DATABASE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              FIRESTORE
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ORM
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              PRISMA
-            </div>
-          </div>
-
-          <!-- Styling & Build -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ STYLING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              TAILWIND
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ BUILD TOOL
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              VITE
-            </div>
-          </div>
-
-          <!-- DevOps, Cloud & Tools -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ DEVOPS
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              DOCKER
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ CI/CD
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-lg uppercase"
-            >
-              GITHUB ACTIONS
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ DEPLOY
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              VERCEL
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ CLOUD
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              AWS
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ VERSION
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              GIT
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ PLATFORM
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              LINUX
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ MAPPING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              MAPBOX
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ TESTING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              VITEST
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ TESTING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              PYTEST
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ TESTING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-lg uppercase"
-            >
-              PLAYWRIGHT
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ MONITORING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              SENTRY
-            </div>
-          </div>
-
-          <!-- Data additions -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ DATABASE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              SQLITE
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ DATABASE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              REDIS
-            </div>
-          </div>
-
-          <!-- Frontend additions -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ANIMATION
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-lg uppercase"
-            >
-              FRAMER MOTION
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ STYLING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              SCSS
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ MAPPING
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              LEAFLET
-            </div>
-          </div>
-
-          <!-- Language addition -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ LANGUAGE
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              HTML/CSS
-            </div>
-          </div>
-
-          <!-- ML tiles -->
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ML
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              TENSORFLOW
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ML
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              PYTORCH
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ML
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              XGBOOST
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ML
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-lg uppercase"
-            >
-              SCIKIT-LEARN
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ML
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              PANDAS
-            </div>
-          </div>
-
-          <div
-            class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2"
-          >
-            <div
-              class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50"
-            >
-              >_ ML
-            </div>
-            <div
-              class="text-white group-hover:text-black font-black font-display text-xl uppercase"
-            >
-              NUMPY
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500"
-        >
-          <span>CORE_TOOLS: 25</span>
-          <span>MODE: CURATED</span>
-        </div>
-      </div>
-    </section>
-
     <section id="experience" class="py-24 px-4 max-w-7xl mx-auto">
       <h2
         class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-normal text-center"
@@ -1812,6 +1007,24 @@
       </h2>
 
       <div class="relative border-l-4 border-black ml-4 md:ml-10 space-y-12">
+        <article class="reveal relative pl-8 md:pl-16">
+          <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-blue border-4 border-black"></div>
+          <div class="bg-white border-4 border-black p-6 shadow-hard">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-3 border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+              <h3 class="text-3xl font-black uppercase">Junior Application Developer</h3>
+              <span class="font-mono font-bold bg-neo-black text-white px-2 py-1 shrink-0">Jun 2026 - PRESENT</span>
+            </div>
+            <p class="font-mono text-lg mb-4 font-bold">@ UC DAVIS INFORMATION &amp; EDUCATIONAL TECHNOLOGY</p>
+            <ul class="list-disc pl-5 font-mono text-gray-700 space-y-3">
+              <li>Develop and maintain C#/.NET advising applications and OASIS-uAchieve integration workflows supporting UC Davis's 31,000+ undergraduate population.</li>
+              <li>Implement and debug student-form processing, correct academic-credit calculations, and investigate program-change submission errors.</li>
+              <li>Validate changes in test environments, review and merge pull requests, and coordinate release verification with engineers and registrar staff.</li>
+              <li>Evaluate degree-audit code for correctness and performance, identifying repeated lookups and recommending result reuse across graduation requirements.</li>
+              <li>Maintain advising-system documentation and convert help content into structured Markdown for a ServiceNow knowledge-base migration.</li>
+            </ul>
+          </div>
+        </article>
+
         <div class="reveal relative pl-8 md:pl-16">
           <div
             class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-yellow border-4 border-black"
@@ -1827,7 +1040,7 @@
               </h3>
               <span
                 class="font-mono font-bold bg-neo-black text-white px-2 py-1"
-                >Nov 2025 - PRESENT</span
+                >Nov 2025 - May 2026</span
               >
             </div>
             <p class="font-mono text-xl mb-2 text-neo-orange font-bold">
@@ -1835,8 +1048,8 @@
             </p>
             <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
               <li>
-                Built React/TypeScript features for a production event
-                platform serving 70,000+ UC Davis Picnic Day attendees.
+                Designed and developed the React/TypeScript Picnic Day Schedule
+                Builder for a UC Davis event with 70,000+ attendees.
               </li>
               <li>
                 Implemented onboarding tutorials, calendar exports, and
@@ -1874,13 +1087,13 @@
               >
             </div>
             <p class="font-mono text-xl mb-2 text-neo-green font-bold">
-              @ INCLUDE
+              @ #INCLUDE DAVIS
             </p>
             <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
               <li>
-                Shipped 3 responsive React/Next.js sections for a client
-                website, translating Figma requirements into reusable
-                production components.
+                Delivered responsive React/Next.js features for the Space and
+                Satellite Systems client website, translating Figma designs
+                into reusable desktop and mobile components.
               </li>
               <li>
                 Built prop-driven layouts, optimized Next.js image rendering,
@@ -1908,7 +1121,7 @@
               >
             </div>
             <p class="font-mono text-xl mb-2 text-neo-blue font-bold">
-              @ GOOGLE DEVELOPER STUDENT CLUB
+              @ GOOGLE DEVELOPER STUDENT CLUBS
             </p>
             <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
               <li>
@@ -1924,197 +1137,134 @@
         </div>
       </div>
     </section>
-    <!-- BUILD NOTES SECTION -->
-    <section
-      id="proof"
-      class="py-12 bg-neo-black text-white border-y-4 border-black relative overflow-hidden"
-    >
-      <div
-        class="absolute inset-0 opacity-20"
-        style="
-          background-image:
-            linear-gradient(#333 1px, transparent 1px),
-            linear-gradient(90deg, #333 1px, transparent 1px);
-          background-size: 40px 40px;
-        "
-      ></div>
 
-      <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <!-- Compact Header -->
-        <div
-          class="flex justify-between items-center mb-6 border-b-2 border-white pb-3"
-        >
-          <h2
-            class="text-4xl md:text-5xl font-black uppercase text-white tracking-normal"
+    <section id="skills" class="stack-section">
+      <div class="max-w-7xl mx-auto">
+        <div class="stack-header">
+          <div><p class="stack-eyebrow"><span></span> THE BUILDER'S LOADOUT / V.2026</p>
+            <h2>TECH<span>_STACK</span></h2></div>
+          <p class="stack-intro">Different tools. Same instinct.<br /><strong>Make it useful. Make it hold up.</strong></p>
+        </div>
+        <div class="language-rail"><span class="language-label">&gt;_ LANGUAGE LAYER</span><div><span class="language-chip">TypeScript</span><span class="language-chip">JavaScript</span><span class="language-chip">C#</span><span class="language-chip">Java</span><span class="language-chip">Python</span><span class="language-chip">SQL</span><span class="language-chip">C</span><span class="language-chip">C++</span><span class="language-chip">Go</span></div></div>
+        <div class="stack-layout">
+          <article class="stack-bay" style="--bay-color:#3B82F6">
+            <div class="stack-bay-head"><span class="stack-index">01 / FRONTEND</span><i class="ri-layout-4-line" aria-hidden="true"></i></div>
+            <h3>The part people touch.</h3>
+            <p class="stack-context">React & TypeScript interfaces for Picnic Day and SSS.</p>
+            <div class="stack-tools"><span class="stack-tool">React</span><span class="stack-tool">Next.js</span><span class="stack-tool">Tailwind CSS</span><span class="stack-tool">SCSS</span><span class="stack-tool">HTML / CSS</span></div>
+          </article>
+          <article class="stack-bay" style="--bay-color:#33FF57">
+            <div class="stack-bay-head"><span class="stack-index">02 / BACKEND</span><i class="ri-terminal-box-line" aria-hidden="true"></i></div>
+            <h3>The work behind the screen.</h3>
+            <p class="stack-context">From UC Davis advising systems to Java and Python APIs.</p>
+            <div class="stack-tools"><span class="stack-tool">C# / .NET Framework</span><span class="stack-tool">ASP.NET Web Forms</span></div><div class="stack-tools"><span class="stack-tool">Spring Boot</span><span class="stack-tool">Node.js</span><span class="stack-tool">Express</span><span class="stack-tool">Flask</span><span class="stack-tool">FastAPI</span><span class="stack-tool">REST APIs</span></div>
+          </article>
+          <article class="stack-bay" style="--bay-color:#FBFF48">
+            <div class="stack-bay-head"><span class="stack-index">03 / DATA</span><i class="ri-database-2-line" aria-hidden="true"></i></div>
+            <h3>A place for everything.</h3>
+            <p class="stack-context">Persistence, caching, and synchronized event data.</p>
+            <div class="stack-tools"><span class="stack-tool">PostgreSQL</span><span class="stack-tool">SQLite</span><span class="stack-tool">Redis</span></div><div class="stack-tools"><span class="stack-tool">Prisma</span><span class="stack-tool">JPA / H2</span><span class="stack-tool">Firestore</span><span class="stack-tool">Supabase</span></div>
+          </article>
+          <article class="stack-bay" style="--bay-color:#A855F7">
+            <div class="stack-bay-head"><span class="stack-index">04 / DELIVERY</span><i class="ri-git-branch-line" aria-hidden="true"></i></div>
+            <h3>Ship. Check. Repeat.</h3>
+            <p class="stack-context">Tests, CI, monitoring, and environments that hold up.</p>
+            <div class="stack-tools"><span class="stack-tool">Playwright</span><span class="stack-tool">Vitest</span><span class="stack-tool">Pytest</span><span class="stack-tool">GitHub Actions</span></div><div class="stack-tools"><span class="stack-tool">Docker</span><span class="stack-tool">Linux</span><span class="stack-tool">AWS</span><span class="stack-tool">Vercel</span><span class="stack-tool">Sentry</span><span class="stack-tool">ServiceNow</span></div>
+          </article>
+          <article class="stack-bay" style="--bay-color:#FF70A6">
+            <div class="stack-bay-head"><span class="stack-index">05 / MACHINE LEARNING</span><i class="ri-brain-line" aria-hidden="true"></i></div>
+            <h3>Find the signal.</h3>
+            <p class="stack-context">Feature engineering and models over 32,000+ Spotify tracks.</p>
+            <div class="stack-tools"><span class="stack-tool">scikit-learn</span><span class="stack-tool">XGBoost</span><span class="stack-tool">TensorFlow</span><span class="stack-tool">PyTorch</span></div><div class="stack-tools"><span class="stack-tool">Pandas</span><span class="stack-tool">NumPy</span></div>
+          </article>
+        </div>
+        <div class="stack-footer"><span>INTERFACE → LOGIC → DATA → DELIVERY</span><span>+ A LITTLE CURIOSITY</span></div>
+      </div>
+    </section>
+
+    <section
+      id="about"
+      class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 reveal">
+          <div
+            class="aspect-square bg-neo-black border-4 border-black relative shadow-hard overflow-hidden group"
           >
-            BUILD<span class="text-neo-green">_NOTES</span>
-          </h2>
-          <div class="flex items-center gap-2">
-            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <p class="font-mono text-neo-green text-xs font-bold">STATIC</p>
+            <img
+              src="Assets/images/avatar.jpg"
+              alt="Miguel Beltran"
+              class="w-full h-full object-cover"
+            />
+            <span
+              class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-black z-10"
+              >AVATAR.JPG</span
+            >
           </div>
         </div>
+        <div class="md:col-span-8 flex flex-col justify-center reveal">
+          <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
+          <p class="font-mono text-xl leading-relaxed mb-6">
+            I am Miguel. A CS student at
+            <span class="bg-neo-yellow px-1 border border-black">UC Davis</span>
+            focused on full-stack software engineering, with experience moving
+            between polished interfaces, backend services, data workflows, and
+            tested user-facing features.
+          </p>
+          <p
+            class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4"
+          >
+            > Junior Application Developer at UC Davis IET.<br />
+            > Former Assistant Technical Director for ASUCD Picnic Day.<br />
+            > React/TypeScript, C#/.NET, Java, and Python.<br />
+            > I like work that connects the frontend, backend, data, and tests.
+          </p>
 
-        <!-- Personal build philosophy -->
-        <div class="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
-          <div class="reveal flex flex-col h-full">
+          <div class="flex flex-wrap gap-4">
             <div
-              class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2"
+              class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent"
             >
-              <div
-                class="w-8 h-8 bg-neo-green border-2 border-white flex items-center justify-center"
-              >
-                <i class="ri-verified-badge-fill text-lg text-black"></i>
-              </div>
-              <h3 class="text-2xl font-black uppercase text-white">
-                HOW I LIKE TO BUILD
+              📍 LOCATION: DAVIS, CA
+            </div>
+            <div
+              class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black"
+            >
+              🎓 UC DAVIS CS: EXPECTED JUNE 2027
+            </div>
+          </div>
+
+          <div
+            class="mt-8 bg-neo-white border-4 border-black p-5 shadow-hard font-mono"
+          >
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+              <h3 class="text-2xl font-black uppercase font-display">
+                Education_Record
               </h3>
-            </div>
-
-            <div
-              class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group"
-            >
-              <div
-                class="flex items-center justify-between mb-8 pb-4 border-b border-white/10"
+              <span class="bg-neo-black text-white px-2 py-1 text-xs font-bold"
+                >EXPECTED JUNE 2027</span
               >
-                <div class="flex items-center gap-3">
-                  <i class="ri-code-box-fill text-3xl text-neo-green"></i>
-                  <div>
-                    <h4 class="text-xl font-black text-white leading-tight">
-                      Useful software with a real pulse
-                    </h4>
-                    <p
-                      class="text-[10px] font-mono text-neo-green uppercase tracking-widest"
-                    >
-                      Product feel, backend shape, data flow, tests
-                    </p>
-                  </div>
-                </div>
-                <div class="text-right">
-                  <div
-                    class="text-2xl font-black text-neo-green tracking-normal"
-                  >
-                    1,000+
-                  </div>
-                  <p class="text-[8px] font-mono text-gray-500 uppercase">
-                    people reached
-                  </p>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-2 gap-4 mb-8 uppercase">
-                <div
-                  class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]"
-                >
-                  <div
-                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70"
-                  >
-                    Favorite mode
-                  </div>
-                  <div
-                    class="text-white font-black text-3xl tracking-normal"
-                  >
-                    ship it
-                  </div>
-                </div>
-                <div
-                  class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]"
-                >
-                  <div
-                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70"
-                  >
-                    People scale
-                  </div>
-                  <div
-                    class="text-white font-black text-3xl tracking-normal"
-                  >
-                    70K+
-                  </div>
-                </div>
-                <div
-                  class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]"
-                >
-                  <div
-                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70"
-                  >
-                    Data scale
-                  </div>
-                  <div
-                    class="text-white font-black text-3xl tracking-normal"
-                  >
-                    32K+
-                  </div>
-                </div>
-                <div
-                  class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]"
-                >
-                  <div
-                    class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70"
-                  >
-                    Craft
-                  </div>
-                  <div
-                    class="text-white font-black text-xl tracking-normal mt-1 leading-none"
-                  >
-                    test the path
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex-1 flex flex-col justify-center mb-8">
-                <div
-                  class="bg-black border-2 border-neo-green/30 p-5 overflow-hidden shadow-[4px_4px_0_rgba(51,255,87,0.1)] group hover:border-neo-green transition-colors duration-500 relative"
-                >
-                  <div
-                    class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse"
-                  ></div>
-                  <p
-                    class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-3"
-                  >
-                    Builder_Readout
-                  </p>
-                  <ul class="font-mono text-sm text-gray-300 space-y-3">
-                    <li>
-                      <span class="text-neo-green font-black">01</span>
-                      I like projects that have a real user on the other side,
-                      even when the first version is scrappy.
-                    </li>
-                    <li>
-                      <span class="text-neo-green font-black">02</span>
-                      The fun part is making the interface feel simple while
-                      the search, sync, caching, and validation do the work.
-                    </li>
-                    <li>
-                      <span class="text-neo-green font-black">03</span>
-                      I care about leaving a project easier to run, easier to
-                      understand, and easier to trust than when I found it.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div
-                class="mt-auto flex items-center justify-between text-neo-green p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]"
-              >
-                <div class="flex items-center gap-2">
-                  <span class="text-white/30">$</span>
-                  <span class="text-neo-green">current_build --dltracker</span>
-                  <span class="animate-pulse">_</span>
-                </div>
-                <a
-                  href="https://dltracker.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-neo-green px-3 py-1 font-black uppercase border border-neo-green hover:bg-neo-green hover:text-black transition-all"
-                >
-                  OPEN_APP
-                </a>
-              </div>
             </div>
+            <p class="font-bold text-lg">University of California, Davis</p>
+            <p class="text-gray-700 mb-3">
+              Bachelor of Science in Computer Science
+            </p>
+            <p class="text-sm text-gray-600">
+              Coursework: Algorithms & Data Structures, Operating Systems,
+              Machine Learning, Artificial Intelligence, Computer Architecture
+            </p>
+          </div>
+          <div class="mt-6 border-l-4 border-neo-green pl-4">
+            <h3 class="font-mono text-sm font-bold mb-3">BUILD_NOTES / HOW I WORK</h3>
+            <ul class="font-mono text-sm text-gray-600 space-y-2 leading-relaxed">
+              <li>Build for a real person on the other side.</li>
+              <li>Keep the interface clear while the data, sync, and validation do the work.</li>
+              <li>Leave it easier to run, understand, and trust.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+
 
     <section
       id="reports"
@@ -2143,12 +1293,12 @@
           <div
             class="ml-8 px-2 bg-neo-blue text-black text-[10px] font-black uppercase"
           >
-            LIVE_FEED
+            PERSONAL_LOG
           </div>
         </div>
       </div>
 
-      <div class="marquee-container group cursor-hover">
+      <div class="marquee-container group cursor-hover" role="region" aria-label="Personal interests" tabindex="0">
         <div class="marquee-content flex gap-8 py-12 px-4 select-none">
           <!-- Original Set -->
           <div
@@ -2314,6 +1464,7 @@
 
           <!-- Duplicate Set for Loop -->
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-green/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-green"></div>
@@ -2347,6 +1498,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-blue/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue"></div>
@@ -2379,6 +1531,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-pink/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink"></div>
@@ -2411,6 +1564,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-purple/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple"></div>
@@ -2443,6 +1597,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-orange/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-orange"></div>
@@ -2522,6 +1677,8 @@
 
           <form
             id="contact-form"
+            method="post"
+            action="https://api.web3forms.com/submit"
             class="space-y-6 bg-gray-50 p-6 border-2 border-black"
           >
             <input
@@ -2590,6 +1747,9 @@
           </form>
           <div
             id="form-status"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
             class="hidden mt-6 p-6 border-4 border-black font-mono text-center shadow-hard"
           ></div>
         </div>
@@ -2606,7 +1766,7 @@
           <h2 class="text-4xl font-black mb-6">MIGUEL BELTRAN</h2>
           <p class="text-gray-400 max-w-sm">
             Full-stack software engineer building React and TypeScript
-            frontends, Java/Spring Boot and Python/FastAPI backends, data
+            frontends, C#/.NET, Java/Spring Boot, and Python backends, data
             workflows, and tested user-facing platforms.
           </p>
         </div>
@@ -2660,6 +1820,7 @@
               href="https://github.com/migueljbeltran"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile"
               class="text-2xl hover:text-neo-yellow transition-colors cursor-hover"
               ><i class="ri-github-fill"></i
             ></a>
@@ -2667,11 +1828,13 @@
               href="https://www.linkedin.com/in/miguel-j-beltran"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               class="text-2xl hover:text-neo-purple transition-colors cursor-hover"
               ><i class="ri-linkedin-fill"></i
             ></a>
             <a
               href="mailto:migueljoaquinbeltran@gmail.com"
+              aria-label="Email Miguel Beltran"
               class="text-2xl hover:text-neo-blue transition-colors cursor-hover"
               ><i class="ri-mail-fill"></i
             ></a>
@@ -2693,34 +1856,35 @@
     </footer>
 
     <script>
-      // Custom Cursor Logic
-      const cursor = document.getElementById("cursor");
-      const hoverElements = document.querySelectorAll(
-        ".cursor-hover, a, button, input, textarea",
-      );
-
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-        cursor.style.transform = `translate(-50%, -50%)`;
-      });
-
-      // Add hover effect to cursor
-      hoverElements.forEach((el) => {
-        el.addEventListener("mouseenter", () => {
-          cursor.style.width = "60px";
-          cursor.style.height = "60px";
-          cursor.style.backgroundColor = "#FBFF48"; // Neo Yellow
-          cursor.style.mixBlendMode = "normal";
-          cursor.style.border = "2px solid black";
+      // Event-driven cursor: one paint per pointer frame, no idle animation loop.
+      const cursor = document.getElementById('cursor');
+      const cursorMode = matchMedia('(pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference)');
+      let cursorFrame = 0, pointerX = 0, pointerY = 0;
+      const hideCursor = () => {
+        cancelAnimationFrame(cursorFrame); cursorFrame = 0;
+        document.documentElement.classList.remove('custom-cursor-ready');
+      };
+      document.addEventListener('pointermove', event => {
+        if (!cursorMode.matches || event.pointerType !== 'mouse' || event.target.closest('input, textarea, select, [contenteditable="true"]')) { hideCursor(); return; }
+        pointerX = event.clientX; pointerY = event.clientY;
+        cursor.classList.toggle('is-hovering', Boolean(event.target.closest('a, button, summary, .stack-tool')));
+        if (!cursorFrame) cursorFrame = requestAnimationFrame(() => {
+          cursor.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0) translate(-50%, -50%)`;
+          document.documentElement.classList.add('custom-cursor-ready');
+          cursorFrame = 0;
         });
-        el.addEventListener("mouseleave", () => {
-          cursor.style.width = "24px";
-          cursor.style.height = "24px";
-          cursor.style.backgroundColor = "#fff";
-          cursor.style.mixBlendMode = "difference";
-          cursor.style.border = "none";
-        });
+      }, {passive:true});
+      document.documentElement.addEventListener('pointerleave', hideCursor);
+      window.addEventListener('blur', hideCursor);
+      document.addEventListener('keydown', event => { if (event.key === 'Tab') hideCursor(); });
+      if (typeof cursorMode.addEventListener === 'function') {
+        cursorMode.addEventListener('change', hideCursor);
+      } else if (typeof cursorMode.addListener === 'function') {
+        cursorMode.addListener(hideCursor);
+      }
+
+      document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => link.closest('details').removeAttribute('open'));
       });
 
       // Scroll Reveal Logic
@@ -2745,7 +1909,7 @@
         let height =
           document.documentElement.scrollHeight -
           document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
+        let scrolled = height > 0 ? (winScroll / height) * 100 : 0;
         document.getElementById("progressBar").style.width = scrolled + "%";
       };
 
