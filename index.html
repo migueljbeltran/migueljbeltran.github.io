@@ -40,11 +40,6 @@
 
     <!-- Theme & Performance -->
     <meta name="theme-color" content="#121212" />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@800&display=swap"
-      as="style"
-    />
 
     <!-- JSON-LD Structured Data for Search Engines -->
     <script type="application/ld+json">
@@ -177,6 +172,9 @@
       }
 
       .marquee-container:hover .marquee-content {
+        animation-play-state: paused;
+      }
+      .marquee-container:focus-within .marquee-content {
         animation-play-state: paused;
       }
 
@@ -419,6 +417,8 @@
       @media (prefers-reduced-motion: reduce) {
         .reveal, .project-card, .project-card img { transition: none; }
         .marquee-content, .marquee-content-reverse { animation: none; }
+        #reports .marquee-container { overflow-x: auto; }
+        #reports .marquee-content > [aria-hidden="true"] { display: none; }
       }
 
       .stack-section { padding: 88px 24px; background: #121212; color: #fffdf5; border-block: 4px solid #000; background-image: linear-gradient(#ffffff06 1px, transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px); background-size: 36px 36px; }
@@ -1293,12 +1293,12 @@
           <div
             class="ml-8 px-2 bg-neo-blue text-black text-[10px] font-black uppercase"
           >
-            LIVE_FEED
+            PERSONAL_LOG
           </div>
         </div>
       </div>
 
-      <div class="marquee-container group cursor-hover">
+      <div class="marquee-container group cursor-hover" role="region" aria-label="Personal interests" tabindex="0">
         <div class="marquee-content flex gap-8 py-12 px-4 select-none">
           <!-- Original Set -->
           <div
@@ -1464,6 +1464,7 @@
 
           <!-- Duplicate Set for Loop -->
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-green/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-green"></div>
@@ -1497,6 +1498,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-blue/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue"></div>
@@ -1529,6 +1531,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-pink/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink"></div>
@@ -1561,6 +1564,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-purple/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple"></div>
@@ -1593,6 +1597,7 @@
           </div>
 
           <div
+            aria-hidden="true"
             class="flex-shrink-0 w-[450px] bg-neo-black border-4 border-white/10 p-8 shadow-hard hover:border-neo-orange/50 hover:-translate-y-2 transition-all duration-500 relative group/card overflow-hidden text-left whitespace-normal"
           >
             <div class="absolute top-0 left-0 w-full h-1 bg-neo-orange"></div>
@@ -1742,6 +1747,9 @@
           </form>
           <div
             id="form-status"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
             class="hidden mt-6 p-6 border-4 border-black font-mono text-center shadow-hard"
           ></div>
         </div>
@@ -1812,6 +1820,7 @@
               href="https://github.com/migueljbeltran"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile"
               class="text-2xl hover:text-neo-yellow transition-colors cursor-hover"
               ><i class="ri-github-fill"></i
             ></a>
@@ -1819,11 +1828,13 @@
               href="https://www.linkedin.com/in/miguel-j-beltran"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               class="text-2xl hover:text-neo-purple transition-colors cursor-hover"
               ><i class="ri-linkedin-fill"></i
             ></a>
             <a
               href="mailto:migueljoaquinbeltran@gmail.com"
+              aria-label="Email Miguel Beltran"
               class="text-2xl hover:text-neo-blue transition-colors cursor-hover"
               ><i class="ri-mail-fill"></i
             ></a>
