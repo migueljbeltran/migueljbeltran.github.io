@@ -395,6 +395,7 @@
       #experience li { line-height: 1.7; }
       #experience li + li { margin-top: .65rem; }
       #experience h3 { line-height: 1.15; }
+      #skills h2 { font-size: clamp(2.25rem, 7vw, 6rem); }
       #experience > h2 { font-size: clamp(2rem, 7vw, 5rem); }
       #contact a[href^="mailto:"] { overflow-wrap: anywhere; }
       #experience .text-neo-green { color: #166534; }
@@ -484,16 +485,16 @@
             >/WORK</a
           >
           <a
-            href="#skills"
-            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
-            >/SKILLS</a
-          >
-          <a
             href="#experience"
             class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
             >/LOGS</a
           >
-          <a
+                    <a
+            href="#skills"
+            class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover"
+            >/SKILLS</a
+          >
+<a
             href="#contact"
             class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover"
             >CONTACT ME</a
@@ -501,7 +502,7 @@
         </div>
         <details class="mobile-menu">
           <summary>EXPLORE / MENU</summary>
-          <div><a href="#about">About</a><a href="#projects">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+          <div><a href="#about">About</a><a href="#projects">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
         </details>
       </div>
     </nav>
@@ -823,7 +824,7 @@
               </div>
               <div class="flex sm:flex-col gap-2 shrink-0">
                 <a
-                  href="https://picnicday.ucdavis.edu/"
+                  href="https://pd-schedule-builder.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Picnic Day Scheduler live site"
@@ -1004,95 +1005,6 @@
       </div>
     </section>
 
-    <section id="skills" class="py-20 px-4 bg-neo-black border-y-4 border-black">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-          <h2 class="text-5xl md:text-7xl font-black text-white">TECH<span class="text-neo-green">_STACK</span></h2>
-          <p class="font-mono text-sm text-gray-300 max-w-sm">The tools behind my work, from university systems to independent builds.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="reveal bg-neo-blue text-black border-2 border-black p-6 shadow-hard">
-            <p class="font-mono text-xs font-bold mb-3">01 / FRONTEND</p>
-            <h3 class="text-3xl font-black mb-5">Interfaces</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold"><span class="bg-neo-black text-white px-2 py-1">React</span>
-<span class="bg-neo-black text-white px-2 py-1">Next.js</span>
-<span class="bg-neo-black text-white px-2 py-1">TypeScript</span>
-<span class="bg-neo-black text-white px-2 py-1">Tailwind CSS</span>
-<span class="bg-neo-black text-white px-2 py-1">SCSS</span>
-<span class="bg-neo-black text-white px-2 py-1">HTML/CSS</span>
-</div>
-          </article>
-          <article class="reveal bg-neo-green text-black border-2 border-black p-6 shadow-hard">
-            <p class="font-mono text-xs font-bold mb-3">02 / BACKEND</p>
-            <h3 class="text-3xl font-black mb-5">Applications</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold"><span class="bg-neo-black text-white px-2 py-1">C#</span>
-<span class="bg-neo-black text-white px-2 py-1">.NET Framework</span>
-<span class="bg-neo-black text-white px-2 py-1">ASP.NET Web Forms</span>
-<span class="bg-neo-black text-white px-2 py-1">Java</span>
-<span class="bg-neo-black text-white px-2 py-1">Spring Boot</span>
-<span class="bg-neo-black text-white px-2 py-1">Python</span>
-<span class="bg-neo-black text-white px-2 py-1">Flask</span>
-<span class="bg-neo-black text-white px-2 py-1">FastAPI</span>
-<span class="bg-neo-black text-white px-2 py-1">Node.js</span>
-<span class="bg-neo-black text-white px-2 py-1">Express</span>
-<span class="bg-neo-black text-white px-2 py-1">REST APIs</span>
-</div>
-          </article>
-          <article class="reveal bg-neo-yellow text-black border-2 border-black p-6 shadow-hard">
-            <p class="font-mono text-xs font-bold mb-3">03 / DATA</p>
-            <h3 class="text-3xl font-black mb-5">Persistence</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold"><span class="bg-neo-black text-white px-2 py-1">SQL</span>
-<span class="bg-neo-black text-white px-2 py-1">PostgreSQL</span>
-<span class="bg-neo-black text-white px-2 py-1">SQLite</span>
-<span class="bg-neo-black text-white px-2 py-1">Redis</span>
-<span class="bg-neo-black text-white px-2 py-1">Prisma</span>
-<span class="bg-neo-black text-white px-2 py-1">JPA</span>
-<span class="bg-neo-black text-white px-2 py-1">H2</span>
-<span class="bg-neo-black text-white px-2 py-1">Firestore</span>
-<span class="bg-neo-black text-white px-2 py-1">Supabase</span>
-</div>
-          </article>
-          <article class="reveal bg-neo-pink text-black border-2 border-black p-6 shadow-hard">
-            <p class="font-mono text-xs font-bold mb-3">04 / MACHINE LEARNING</p>
-            <h3 class="text-3xl font-black mb-5">Models</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold"><span class="bg-neo-black text-white px-2 py-1">TensorFlow</span>
-<span class="bg-neo-black text-white px-2 py-1">PyTorch</span>
-<span class="bg-neo-black text-white px-2 py-1">XGBoost</span>
-<span class="bg-neo-black text-white px-2 py-1">scikit-learn</span>
-<span class="bg-neo-black text-white px-2 py-1">Pandas</span>
-<span class="bg-neo-black text-white px-2 py-1">NumPy</span>
-</div>
-          </article>
-          <article class="reveal bg-neo-purple text-black border-2 border-black p-6 shadow-hard">
-            <p class="font-mono text-xs font-bold mb-3">05 / DELIVERY</p>
-            <h3 class="text-3xl font-black mb-5">Reliable releases</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold"><span class="bg-neo-black text-white px-2 py-1">Playwright</span>
-<span class="bg-neo-black text-white px-2 py-1">Vitest</span>
-<span class="bg-neo-black text-white px-2 py-1">Pytest</span>
-<span class="bg-neo-black text-white px-2 py-1">GitHub Actions</span>
-<span class="bg-neo-black text-white px-2 py-1">CI/CD</span>
-<span class="bg-neo-black text-white px-2 py-1">Docker</span>
-<span class="bg-neo-black text-white px-2 py-1">Linux</span>
-<span class="bg-neo-black text-white px-2 py-1">AWS</span>
-<span class="bg-neo-black text-white px-2 py-1">Vercel</span>
-<span class="bg-neo-black text-white px-2 py-1">Sentry</span>
-</div>
-          </article>
-          <article class="reveal bg-neo-orange text-black border-2 border-black p-6 shadow-hard">
-            <p class="font-mono text-xs font-bold mb-3">06 / FOUNDATION</p>
-            <h3 class="text-3xl font-black mb-5">Beyond the stack</h3>
-            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold"><span class="bg-neo-black text-white px-2 py-1">JavaScript</span>
-<span class="bg-neo-black text-white px-2 py-1">C</span>
-<span class="bg-neo-black text-white px-2 py-1">C++</span>
-<span class="bg-neo-black text-white px-2 py-1">Go</span>
-<span class="bg-neo-black text-white px-2 py-1">Git</span>
-<span class="bg-neo-black text-white px-2 py-1">ServiceNow</span>
-</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="experience" class="py-24 px-4 max-w-7xl mx-auto">
       <h2
         class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-normal text-center"
@@ -1195,6 +1107,11 @@
                 desktop and mobile.
               </li>
             </ul>
+            <a href="https://www.spacesystemsclub.org/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 mt-5 bg-neo-green text-black border-2 border-black px-4 py-2 font-mono text-sm font-bold shadow-hard-sm hover:bg-neo-yellow transition-colors"
+              aria-label="Open Space and Satellite Systems live website">
+              VISIT SSS WEBSITE <i class="ri-external-link-line" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
 
@@ -1228,6 +1145,234 @@
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="skills"
+      class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image:
+            linear-gradient(#333 1px, transparent 1px),
+            linear-gradient(90deg, #333 1px, transparent 1px);
+          background-size: 40px 40px;
+        "
+      ></div>
+
+      <div class="max-w-[1400px] mx-auto px-4 relative z-10">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4"
+        >
+          <h2
+            class="text-6xl md:text-8xl font-black uppercase text-white tracking-normal"
+          >
+            TECH<span class="text-neo-green">_STACK</span>
+          </h2>
+          <div class="flex items-center gap-2 mb-2 md:mb-4">
+            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+            <p class="font-mono text-neo-green text-sm font-bold">
+              /// SYSTEM_OPTIMIZED
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-10">
+          <div class="reveal bg-white text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black text-neo-blue mb-3">
+              01 / FRONTEND
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Interfaces</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">React</span>
+              <span class="bg-neo-black text-white px-2 py-1">Next.js</span>
+              <span class="bg-neo-black text-white px-2 py-1">TypeScript</span>
+              <span class="bg-neo-black text-white px-2 py-1">Tailwind CSS</span>
+              <span class="bg-neo-black text-white px-2 py-1">SCSS</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-green text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              02 / BACKEND
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Systems</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">C#</span>
+              <span class="bg-neo-black text-white px-2 py-1">.NET Framework</span>
+              <span class="bg-neo-black text-white px-2 py-1">ASP.NET Web Forms</span>
+              <span class="bg-neo-black text-white px-2 py-1">Java</span>
+              <span class="bg-neo-black text-white px-2 py-1">Spring Boot</span>
+              <span class="bg-neo-black text-white px-2 py-1">Python</span>
+              <span class="bg-neo-black text-white px-2 py-1">FastAPI</span>
+              <span class="bg-neo-black text-white px-2 py-1">Flask</span>
+              <span class="bg-neo-black text-white px-2 py-1">Node.js</span>
+              <span class="bg-neo-black text-white px-2 py-1">REST APIs</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-yellow text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              03 / DATA
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Storage</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">PostgreSQL</span>
+              <span class="bg-neo-black text-white px-2 py-1">SQLite</span>
+              <span class="bg-neo-black text-white px-2 py-1">Redis</span>
+              <span class="bg-neo-black text-white px-2 py-1">Prisma</span>
+              <span class="bg-neo-black text-white px-2 py-1">JPA</span>
+              <span class="bg-neo-black text-white px-2 py-1">Firestore</span>
+              <span class="bg-neo-black text-white px-2 py-1">Supabase</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-pink text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              04 / ARTIFICIAL INTELLIGENCE
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">
+              Machine Learning
+            </h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">TensorFlow</span>
+              <span class="bg-neo-black text-white px-2 py-1">PyTorch</span>
+              <span class="bg-neo-black text-white px-2 py-1">XGBoost</span>
+              <span class="bg-neo-black text-white px-2 py-1">scikit-learn</span>
+              <span class="bg-neo-black text-white px-2 py-1">Pandas</span>
+              <span class="bg-neo-black text-white px-2 py-1">NumPy</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-purple text-white border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">
+              05 / QUALITY
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">Shipping</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">Docker</span>
+              <span class="bg-neo-black text-white px-2 py-1">pytest</span>
+              <span class="bg-neo-black text-white px-2 py-1">Playwright</span>
+              <span class="bg-neo-black text-white px-2 py-1">Vitest</span>
+              <span class="bg-neo-black text-white px-2 py-1">GitHub Actions</span>
+              <span class="bg-neo-black text-white px-2 py-1">AWS</span>
+              <span class="bg-neo-black text-white px-2 py-1">Linux</span>
+              <span class="bg-neo-black text-white px-2 py-1">Vercel</span>
+              <span class="bg-neo-black text-white px-2 py-1">Sentry</span>
+            </div>
+          </div>
+          <div class="reveal bg-neo-orange text-black border-4 border-white p-5 shadow-hard">
+            <div class="font-mono text-xs font-black mb-3">06 / FOUNDATION</div>
+            <h3 class="text-3xl font-black uppercase mb-4">Beyond the stack</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+              <span class="bg-neo-black text-white px-2 py-1">JavaScript</span>
+              <span class="bg-neo-black text-white px-2 py-1">C</span>
+              <span class="bg-neo-black text-white px-2 py-1">C++</span>
+              <span class="bg-neo-black text-white px-2 py-1">Go</span>
+              <span class="bg-neo-black text-white px-2 py-1">SQL</span>
+              <span class="bg-neo-black text-white px-2 py-1">ServiceNow</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="reveal border-4 border-white bg-black shadow-hard overflow-hidden mb-8"
+          aria-label="Curated tool matrix"
+        >
+          <div
+            class="flex items-center justify-between border-b-2 border-white/20 p-3 font-mono text-xs"
+          >
+            <span class="text-neo-green font-black">tool.matrix</span>
+            <span class="text-gray-500">curated / hover to scan</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
+              <span class="font-black text-white group-hover:text-black text-xl">TYPESCRIPT</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">FRONTEND</span>
+              <span class="font-black text-white group-hover:text-black text-xl">REACT</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">FRAMEWORK</span>
+              <span class="font-black text-white group-hover:text-black text-xl">NEXT.JS</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
+              <span class="font-black text-white group-hover:text-black text-xl">JAVA</span>
+            </div>
+            <div class="group h-20 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">BACKEND</span>
+              <span class="font-black text-white group-hover:text-black text-lg">SPRING BOOT</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
+              <span class="font-black text-white group-hover:text-black text-xl">PYTHON</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">API</span>
+              <span class="font-black text-white group-hover:text-black text-xl">FASTAPI</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">DATABASE</span>
+              <span class="font-black text-white group-hover:text-black text-lg">POSTGRESQL</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LOCAL DATA</span>
+              <span class="font-black text-white group-hover:text-black text-xl">SQLITE</span>
+            </div>
+            <div class="group h-20 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">CACHE</span>
+              <span class="font-black text-white group-hover:text-black text-xl">REDIS</span>
+            </div>
+            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">TESTING</span>
+              <span class="font-black text-white group-hover:text-black text-xl">PLAYWRIGHT</span>
+            </div>
+            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">TESTING</span>
+              <span class="font-black text-white group-hover:text-black text-xl">VITEST</span>
+            </div>
+            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-white transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">DEVOPS</span>
+              <span class="font-black text-white group-hover:text-black text-xl">DOCKER</span>
+            </div>
+            <div class="group h-20 border-r-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">ML</span>
+              <span class="font-black text-white group-hover:text-black text-xl">XGBOOST</span>
+            </div>
+            <div class="group h-20 bg-neo-black hover:bg-neo-blue transition-all cursor-hover flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">ML</span>
+              <span class="font-black text-white group-hover:text-black text-xl">PANDAS</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
+              <span class="font-black text-white group-hover:text-black text-lg">C#</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">FRAMEWORK</span>
+              <span class="font-black text-white group-hover:text-black text-lg">.NET</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">BACKEND</span>
+              <span class="font-black text-white group-hover:text-black text-lg">WEB FORMS</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">LANGUAGE</span>
+              <span class="font-black text-white group-hover:text-black text-lg">GO</span>
+            </div>
+            <div class="group h-20 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all flex flex-col items-center justify-center p-2">
+              <span class="font-mono text-[10px] text-neo-green group-hover:text-black opacity-60">KNOWLEDGE</span>
+              <span class="font-black text-white group-hover:text-black text-lg">SERVICENOW</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-400"
+        >
+          <span>MATRIX_TOOLS: 20</span>
+          <span>MODE: CURATED</span>
         </div>
       </div>
     </section>

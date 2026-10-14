@@ -22,7 +22,8 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 
 - Clean hero with resume download and project-first calls to action
 - Tasteful motion through slow hero shapes, subtle status animation, and restrained hover states
-- Six focused skill groups with the original terminal-like personality
+- Original terminal-style tech stack with colored skill panels and an expanded interactive tool matrix
+- Experience Log directly after selected projects, with live project and client links
 - Mobile navigation, visible keyboard focus, native cursor, and reduced-motion support
 - UC Davis IET advising-system experience and current resume download
 - Featured project cards with real impact, personal context, and technical depth
