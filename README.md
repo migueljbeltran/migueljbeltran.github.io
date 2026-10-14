@@ -22,9 +22,9 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 
 - Clean hero with resume download and project-first calls to action
 - Tasteful motion through slow hero shapes, subtle status animation, and restrained hover states
-- Original terminal-style tech stack with colored skill panels and an expanded interactive tool matrix
-- Experience Log directly after selected projects, with live project and client links
-- Mobile navigation, visible keyboard focus, native cursor, and reduced-motion support
+- Terminal-inspired loadout with a separate language layer and grouped frontend, backend, data, delivery, and ML panels
+- Experience Log directly after selected projects, with live project links in Selected Works
+- Mobile navigation, visible keyboard focus, custom desktop cursor with native touch, keyboard, and reduced-motion behavior, and reduced-motion support
 - UC Davis IET advising-system experience and current resume download
 - Featured project cards with real impact, personal context, and technical depth
 - Resume-aligned experience, curated skills, education, and selected work
@@ -38,6 +38,7 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 | :--- | :--- | :--- |
 | **dltracker** | Next.js 16, TypeScript, PostgreSQL, Redis, Zod, Playwright, Vitest | Deployed analytics platform used by 1,000+ users |
 | **Picnic Day Scheduler** | React, TypeScript, SQLite, Leaflet, Mapbox, Docker | UC Davis event platform for 70,000+ attendees |
+| **Space & Satellite Systems** | React, Next.js, SCSS | Responsive client website features delivered through #include Davis |
 | **Spotify Hit Classifier** | Python, TensorFlow, XGBoost, scikit-learn | ML pipeline over 32,000+ Spotify tracks |
 | **Kitch** | Java, Spring Boot, React, Vite, H2, JPA | Full-stack kitchen management app with 20+ REST endpoints |
 | **8-Bit CPU** | Logisim, Computer Architecture | 5-stage pipelined processor with forwarding and hazards |
