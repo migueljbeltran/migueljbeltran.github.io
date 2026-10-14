@@ -55,8 +55,6 @@ Personal portfolio for **Miguel Beltran**, focused on full-stack software, usefu
 └── README.md            # Repo overview
 ```
 
-## /// CONTACT
-
 ## /// VALIDATION
 
 Run the browser-compatibility regression checks with Node.js:
